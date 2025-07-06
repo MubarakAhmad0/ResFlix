@@ -1,0 +1,11 @@
+feat: Implement initial project setup with Inertia.js and Vue.js
+
+This commit sets up the basic project structure using Laravel Breeze with Inertia.js and Vue.js.
+
+Key changes include:
+- Installation and configuration of Inertia.js and Vue.js.
+- Creation of new Vue components and pages.
+- Updates to `composer.json`, `package.json`, `vite.config.js`, and `app.php` for Inertia/Vue integration.
+- Removal of the default `welcome.blade.php` view.
+- Addition of new routes for project browsing and authentication.
+- Database migrations and seeders for projects.
