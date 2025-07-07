@@ -1,11 +1,8 @@
-feat: Implement initial project setup with Inertia.js and Vue.js
+feat: Implement Netflix-like browse page and update WhoIsWatching
 
-This commit sets up the basic project structure using Laravel Breeze with Inertia.js and Vue.js.
-
-Key changes include:
-- Installation and configuration of Inertia.js and Vue.js.
-- Creation of new Vue components and pages.
-- Updates to `composer.json`, `package.json`, `vite.config.js`, and `app.php` for Inertia/Vue integration.
-- Removal of the default `welcome.blade.php` view.
-- Addition of new routes for project browsing and authentication.
-- Database migrations and seeders for projects.
+This commit introduces a Netflix-like design for the browse page, including:
+- Integration of a custom header with Vue.js and Inertia.js logic.
+- Display of projects categorized with placeholder images.
+- Updates to the "Who's Watching?" page to use custom images for admin and guest profiles.
+- Removal of the `placeholder.jpg` image.
+- Cleanup of CSS to resolve previous errors.

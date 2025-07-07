@@ -10,9 +10,9 @@ defineProps({
 <template>
     <Head title="Who's Watching?" />
 
-    <div class="flex items-center justify-center min-h-screen bg-black text-white">
+    <div class="flex items-center justify-center min-h-screen bg-grey text-white ">
         <div class="text-center">
-            <h1 class="text-5xl font-bold mb-12">Who's watching?</h1>
+            <h1 class="text-7xl font-bold mb-12">Who's watching?</h1>
             <div class="flex justify-center space-x-8">
                 <Link :href="route('login')" class="flex flex-col items-center group">
                     <img src="/images/1.png" alt="Admin Profile" class="rounded-lg w-40 h-40 object-cover border-4 border-transparent group-hover:border-white transition-all duration-300" />

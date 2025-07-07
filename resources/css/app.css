@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('/fonts/BebasNeue.otf') format('opentype');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -279,6 +284,12 @@ footer {
     grid-template-columns: repeat(3, 1fr);
   }
    
+}
+
+.bent {
+  display: inline-block;
+  transform: perspective(500px) rotateX(15deg);
+  transform-origin: center;
 }
 
 @media(max-width: 500px) {
