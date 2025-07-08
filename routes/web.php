@@ -8,6 +8,10 @@ use Inertia\Inertia;
 use App\Models\Project;
 
 Route::get('/', function () {
+    return Inertia::render('Blank');
+});
+
+Route::get('/whoiswatching', function () {
     return Inertia::render('WhoIsWatching', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
