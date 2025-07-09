@@ -4,8 +4,8 @@
       <h1 class="Banner__title">{{ title }}</h1>
       <p class="Banner__description">{{ truncatedOverview }}</p>
       <div class="Banner__buttons">
-        <Link href="/play" class="Banner__button">
-          <i class="fas fa-play"></i> Play
+        <Link href="/play" class="Banner__button2">
+          <i class="fas fa-info-circle"></i> ▶ Resume
         </Link>
         <button class="Banner__button" @click="showMoreInfo">
           <i class="fas fa-info-circle"></i> More Info
@@ -15,31 +15,15 @@
     <div class="Banner__bottom-shadow" />
   </section>
 </template>
-
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, computed } from 'vue'
 import { Link } from '@inertiajs/vue3'
-const props = defineProps({ type: String })
-const data = ref([])
-const title = ref('')
-const overview = ref('')
-const imgUrl = ref('')
-const fallback = 'Netflix Content'
-
-onMounted(async () => {
-  const response = await fetch(`/api/${props.type}`)
-  const items = await response.json()
-  const item = items[Math.floor(Math.random() * items.length)]
-
-  title.value = item?.title || item?.name || fallback
-  overview.value = item?.overview || ''
-  imgUrl.value = `/storage/${item?.backdrop_path}`
-})
-
+const title = ref('Mubarak Ahmad - Full Stack Developer')
+const overview = ref('Hi, I\'m a passionate software engineering student with a love for building things that live on the internet. I’m currently learning the ins and outs of code, problem-solving, and turning ideas into working applications. This site is where I share my projects, thoughts, and progress along my journey as a developer.')
+const imgUrl = ref('/images/banner1.gif')
 const truncatedOverview = computed(() =>
-  overview.value.length > 150 ? overview.value.slice(0, 150) + '...' : overview.value
+  overview.value.length > 350 ? overview.value.slice(0, 150) + '...' : overview.value
 )
-
 const showMoreInfo = () => {
   console.log('Open modal for more info')
 }
@@ -52,13 +36,36 @@ const showMoreInfo = () => {
   background-position: center;
   position: relative;
   color: white;
+  display: flex;
+  align-items: flex-end;
 }
+
+.Banner__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: 'BabasNeue', sans-serif;
+  @font-face {
+    font-family: 'BabasNeue';
+    src: url('/fonts/BabasNeue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
 .Banner__content {
   padding: 2rem;
-  max-width: 700px;
+  max-width: 850px;
+  z-index: 2;
+  position: relative;
 }
+
+.Banner__buttons {
+  margin-top: 1.5rem;
+}
+
 .Banner__button {
-  background-color: rgba(51, 51, 51, 0.5);
+  background-color: rgba(109, 109, 110, 0.7);
   border: none;
   padding: 0.5rem 1.5rem;
   margin-right: 1rem;
@@ -66,6 +73,27 @@ const showMoreInfo = () => {
   color: white;
   cursor: pointer;
 }
+
+.Banner__button2 {
+  background-color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.Banner__button:hover {
+  background-color: grey;
+}
+
+.Banner__button2:hover {
+  background-color: grey;
+}
+
 .Banner__bottom-shadow {
   position: absolute;
   bottom: 0;

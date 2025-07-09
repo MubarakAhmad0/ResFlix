@@ -50,19 +50,20 @@
     <Banner type="series" />
 
     <!-- MAIN CONTAINER -->
-    <section class="main-container">
+    <section class="main-container" style="padding-top: 100px;">
       <div class="location" id="home">
+        <h1 id="home">My Projects</h1>
         <div class="box">
-          <a v-for="project in staticProjects.all" :key="project.id" :href="project.details_link || '#'">
+          <a v-for="project in projects.all" :key="project.id" :href="project.details_link || '#'">
             <img :src="project.thumbnail_url || '/images/placeholder.jpg'" :alt="project.title">
           </a>
         </div>
       </div>
 
-      <template v-for="(projects, category) in staticProjects" :key="category">
+      <template v-for="(categoryProjects, category) in projects" :key="category">
         <h1 :id="category">{{ category }}</h1>
         <div class="box">
-          <a v-for="project in projects" :key="project.id" :href="project.details_link || '#'">
+          <a v-for="project in categoryProjects" :key="project.id" :href="project.details_link || '#'">
             <img :src="project.thumbnail_url || '/images/placeholder.jpg'" :alt="project.title">
           </a>
         </div>
@@ -106,138 +107,16 @@
 import { defineProps, ref } from 'vue'
 import { Link } from '@inertiajs/vue3'
 import Banner from '@/Components/Banner.vue'
+import Credits from '@/Components/Credits.vue'
 
-const staticProjects = {
-    'Today\'s Top Picks for Guest': [
-        { id: 1, title: 'Project Alpha', thumbnail_url: '/images/1.png', details_link: '/whoiswatching' },
-        { id: 2, title: 'Project Beta', thumbnail_url: '/images/2.png', details_link: '#' },
-        { id: 3, title: 'Project Gamma', thumbnail_url: '/images/1.png', details_link: '#' },
-        { id: 4, title: 'Project Delta', thumbnail_url: '/images/2.png', details_link: '#' },
-        { id: 5, title: 'Project Epsilon', thumbnail_url: '/images/1.png', details_link: '#' },
-        { id: 6, title: 'Project Zeta', thumbnail_url: '/images/1.png', details_link: '#' },
-    ],
-    'Trending Now': [
-        { id: 7, title: 'Project Eta', thumbnail_url: '/images/1.png', details_link: '#' },
-        { id: 8, title: 'Project Theta', thumbnail_url: '/images/2.png', details_link: '#' },
-        { id: 9, title: 'Project Iota', thumbnail_url: '/images/1.png', details_link: '#' },
-    ],
-    'TV Shows': [
-        { id: 10, title: 'Project Kappa', thumbnail_url: '/images/2.png', details_link: '#' },
-        { id: 11, title: 'Project Lambda', thumbnail_url: '/images/1.png', details_link: '#' },
-        { id: 12, title: 'Project Mu', thumbnail_url: '/images/2.png', details_link: '#' },
-    ],
-};
+const props = defineProps({
+  projects: Object,
+})
 
 const userDropdownOpen = ref(false)
 const guestDropdownOpen = ref(false)
 </script>
 
-<style scoped>
-/* Main container styling */
-.main-container {
-  background-color: #141414;
-  color: white;
-  min-height: 100vh;
-  padding-top: 0px;
-  padding-left: 20px;
-  margin-top: 1px; 
-}
+<style>
 
-/* Category headings */
-.main-container h1 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 1px 0 1px 0;
-  color: #e5e5e5;
-}
-
-/* Box containers for project grids */
-.box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 3px;
-}
-
-/* Project links */
-.box a {
-  flex: 0 0 calc(16.666% - 15px); /* 6 items per row */
-  min-width: 200px;
-  transition: transform 0.3s ease;
-}
-
-.box a:hover {
-  transform: scale(1.05);
-}
-
-/* Project images */
-.box img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive design */
-@media (max-width: 1200px) {
-  .box a {
-    flex: 0 0 calc(20% - 15px); /* 5 items per row */
-  }
-}
-
-@media (max-width: 768px) {
-  .box a {
-    flex: 0 0 calc(33.333% - 15px); /* 3 items per row */
-  }
-}
-
-@media (max-width: 480px) {
-  .box a {
-    flex: 0 0 calc(50% - 15px); /* 2 items per row */
-  }
-}
-
-/* Links section styling */
-.link {
-  background-color: #141414;
-  padding: 40px 20px;
-  border-top: 1px solid #333;
-}
-
-.logos {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-.logo {
-  color: #757575;
-  transition: color 0.3s ease;
-}
-
-.logo:hover {
-  color: #e50914;
-}
-
-.sub-links ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-}
-
-.sub-links a {
-  color: #757575;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.sub-links a:hover {
-  color: #e5e5e5;
-}
 </style>

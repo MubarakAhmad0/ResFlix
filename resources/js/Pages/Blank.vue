@@ -690,7 +690,7 @@ body {
             box-shadow: 0px 0px 10px 0px rgba(228, 9, 19, 0.75); }
         #container netflixintro [class*="helper-"] .effect-lumieres .lamp-1 {
           --color: #ff0100;
-          z: 6;
+          
           left: 0.7%;
           width: 1%;
           animation-delay: 0.83s; }
