@@ -5,10 +5,10 @@
       <p class="Banner__description">{{ truncatedOverview }}</p>
       <div class="Banner__buttons">
         <Link href="/play" class="Banner__button2">
-          <i class="fas fa-info-circle"></i> ▶ Resume
+          <i class=""></i> ▷ Resume
         </Link>
         <button class="Banner__button" @click="showMoreInfo">
-          <i class="fas fa-info-circle"></i> More Info
+          <i class="fas fa-info-circle"></i> &nbspMore Info
         </button>
       </div>
     </div>

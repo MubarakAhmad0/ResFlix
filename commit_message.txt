@@ -1,8 +1,0 @@
-feat: Implement Netflix-like browse page and update WhoIsWatching
-
-This commit introduces a Netflix-like design for the browse page, including:
-- Integration of a custom header with Vue.js and Inertia.js logic.
-- Display of projects categorized with placeholder images.
-- Updates to the "Who's Watching?" page to use custom images for admin and guest profiles.
-- Removal of the `placeholder.jpg` image.
-- Cleanup of CSS to resolve previous errors.

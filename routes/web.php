@@ -71,6 +71,10 @@ Route::get('/browse', function () {
     ]);
 })->name('browse');
 
+Route::get('/contact', function () {
+    return Inertia::render('ContactMe');
+})->name('contact');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

@@ -1,243 +1,60 @@
 <template>
-  <div class="wrapper">
-    <div class="body-font fixed top-0 z-50 w-full bg-black text-white p-0 m-0">
-        <div class="flex flex-col flex-wrap items-center p-3 px-5 md:flex-row">
-            <Link href="/" class="title-font mb-4 flex items-center text-2xl font-bold uppercase md:mb-0">
-                <img src="/images/logo.png" alt="Mubyflix logo" class="h-12">
-            </Link>
-
-            <ul class="flex space-x-6 pl-8">
-              <Link href="/"><li>Home</li></Link>
-              <Link href="#"><li>Skills</li></Link>
-              <Link href="#"><li>Projects</li></Link>
-              <Link href="#"><li>Contact Me</li></Link>
-            </ul>
-
-            <nav class="hidden flex-wrap items-center justify-center space-x-6 text-base font-bold md:ml-auto lg:flex">
-                <div v-if="$page.props.auth.user" class="relative inline-block" :class="{'text-gray-900': userDropdownOpen, 'text-gray-600': !userDropdownOpen }">
-                    <button @click="userDropdownOpen = !userDropdownOpen" class="flex items-center">
-                        <img src="https://occ-0-58-64.1.nflxso.net/dnm/api/v6/0RO1pLmU93-gdXvuxd_iYjzPqkc/AAAABTw7t_oDR-SWh9ddj9kh9AlOqCabZMupMWano7R5wg9x1_KPjvABqKHNeCxcMddK7Ku9HsV6keglPmWPZeh0lKU.png?r=fcc" alt="avatar">
-                        <span :class="userDropdownOpen ? '' : '-rotate-180'" class="transform transition-transform duration-500">
-                            <!-- Chevron Down Icon Placeholder -->
-                            <svg class="h-4 w-4 stroke-current pl-1 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </span>
-                    </button>
-                    <div v-show="userDropdownOpen" @click.away="userDropdownOpen = false"
-                        class="absolute right-0 min-w-max rounded-md bg-white text-gray-500 shadow-xl">
-                        <Link :href="route('logout')" method="post" as="button" class="block rounded-md px-8 py-2 font-bold hover:bg-gray-200 hover:text-gray-600">Log Out</Link>
-                        <Link v-if="$page.props.auth.user && $page.props.auth.user.is_admin" href="/admin" class="block rounded-b-md px-8 py-2 hover:bg-gray-200 hover:text-gray-600">Admin Dashboard</Link>
-                    </div>
-                </div>
-
-                <div v-else class="relative inline-block" :class="{'text-gray-900': guestDropdownOpen, 'text-gray-600': !guestDropdownOpen }">
-                    <button @click="guestDropdownOpen = !guestDropdownOpen" class="flex items-center">
-                        <img src="https://occ-0-58-64.1.nflxso.net/dnm/api/v6/0RO1pLmU93-gdXvuxd_iYjzPqkc/AAAABTw7t_oDR-SWh9ddj9kh9AlOqCabZMupMWano7R5wg9x1_KPjvABqKHNeCxcMddK7Ku9HsV6keglPmWPZeh0lKU.png?r=fcc" alt="avatar">
-                        <span :class="guestDropdownOpen ? '' : '-rotate-180'" class="transform transition-transform duration-500">
-                            <!-- Chevron Down Icon Placeholder -->
-                            <svg class="h-4 w-4 stroke-current pl-1 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </span>
-                    </button>
-                    <div v-show="guestDropdownOpen" @click.away="guestDropdownOpen = false"
-                        class="absolute right-0 min-w-max rounded-md bg-white text-gray-500 shadow-xl">
-                        <Link href="/register" class="block rounded-t-md px-8 py-2 hover:bg-gray-200 hover:text-gray-600">Register</Link>
-                        <Link href="/login" class="block rounded-b-md px-8 py-2 hover:bg-gray-200 hover:text-gray-600">Log in</Link>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    
+  <div class="page-wrapper">
+    <Header />
     <Banner type="series" />
-
-    <!-- MAIN CONTAINER -->
-    <section class="main-container">
-      <div class="location" id="home">
-        <div class="box">
-          <a v-for="project in staticProjects.all" :key="project.id" :href="project.details_link || '#'">
-            <img :src="project.thumbnail_url || '/images/placeholder.jpg'" :alt="project.title">
-          </a>
-        </div>
-      </div>
-
-      <template v-for="(projects, category) in staticProjects" :key="category">
-        <h1 :id="category">{{ category }}</h1>
-        <div class="box">
-          <a v-for="project in projects" :key="project.id" :href="project.details_link || '#'">
-            <img :src="project.thumbnail_url || '/images/placeholder.jpg'" :alt="project.title">
-          </a>
-        </div>
-      </template>
-
-    </section>
-    <!-- END OF MAIN CONTAINER -->
-
-    <!-- LINKS -->
-    <section class="link">
-      <div class="logos">
-        <a href="#"><i class="fab fa-facebook-square fa-2x logo"></i></a>
-        <a href="#"><i class="fab fa-instagram fa-2x logo"></i></a>
-        <a href="#"><i class="fab fa-twitter fa-2x logo"></i></a>
-        <a href="#"><i class="fab fa-youtube fa-2x logo"></i></a>
-      </div>
-      <div class="sub-links">
-        <ul>
-          <li><a href="#">Audio and Subtitles</a></li>
-          <li><a href="#">Audio Description</a></li>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">Gift Cards</a></li>
-          <li><a href="#">Media Center</a></li>
-          <li><a href="#">Investor Relations</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Legal Notices</a></li>
-          <li><a href="#">Corporate Information</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-    </section>
-    <!-- END OF LINKS -->
-
-  
+    
+    <main class="content-container">
+      <ProjectSection
+        v-for="(projects, category) in staticProjects"
+        :key="category"
+        :title="category"
+        :projects="projects"
+        :category-id="category"
+      />
+    </main>
+    
+    <Footer />
   </div>
 </template>
 
 <script setup>
-import { defineProps, ref } from 'vue'
-import { Link } from '@inertiajs/vue3'
+import { ref } from 'vue'
+import Header from '@/Components/Header.vue'
 import Banner from '@/Components/Banner.vue'
+import ProjectSection from '@/Components/ProjectSection.vue'
+import Footer from '@/Components/Footer.vue'
 
-const staticProjects = {
-    'Today\'s Top Picks for Guest': [
-        { id: 1, title: 'Project Alpha', thumbnail_url: '/images/1.png', details_link: '/whoiswatching' },
-        { id: 2, title: 'Project Beta', thumbnail_url: '/images/2.png', details_link: '#' },
-        { id: 3, title: 'Project Gamma', thumbnail_url: '/images/1.png', details_link: '#' },
-        { id: 4, title: 'Project Delta', thumbnail_url: '/images/2.png', details_link: '#' },
-        { id: 5, title: 'Project Epsilon', thumbnail_url: '/images/1.png', details_link: '#' },
-        { id: 6, title: 'Project Zeta', thumbnail_url: '/images/1.png', details_link: '#' },
-    ],
-    'Trending Now': [
-        { id: 7, title: 'Project Eta', thumbnail_url: '/images/1.png', details_link: '#' },
-        { id: 8, title: 'Project Theta', thumbnail_url: '/images/2.png', details_link: '#' },
-        { id: 9, title: 'Project Iota', thumbnail_url: '/images/1.png', details_link: '#' },
-    ],
-    'TV Shows': [
-        { id: 10, title: 'Project Kappa', thumbnail_url: '/images/2.png', details_link: '#' },
-        { id: 11, title: 'Project Lambda', thumbnail_url: '/images/1.png', details_link: '#' },
-        { id: 12, title: 'Project Mu', thumbnail_url: '/images/2.png', details_link: '#' },
-    ],
-};
-
-const userDropdownOpen = ref(false)
-const guestDropdownOpen = ref(false)
+// Consider moving this to a composable or store
+const staticProjects = ref({
+  'Today\'s Top Picks for Guest': [
+    { id: 1, title: 'Project Alpha', thumbnail_url: '/images/1.png', details_link: '/whoiswatching' },
+    { id: 2, title: 'Project Beta', thumbnail_url: '/images/2.png', details_link: '#' },
+    { id: 3, title: 'Project Gamma', thumbnail_url: '/images/1.png', details_link: '#' },
+    { id: 4, title: 'Project Delta', thumbnail_url: '/images/2.png', details_link: '#' },
+    { id: 5, title: 'Project Epsilon', thumbnail_url: '/images/1.png', details_link: '#' },
+    { id: 6, title: 'Project Zeta', thumbnail_url: '/images/1.png', details_link: '#' },
+  ],
+  'Trending Now': [
+    { id: 7, title: 'Project Eta', thumbnail_url: '/images/1.png', details_link: '#' },
+    { id: 8, title: 'Project Theta', thumbnail_url: '/images/2.png', details_link: '#' },
+    { id: 9, title: 'Project Iota', thumbnail_url: '/images/1.png', details_link: '#' },
+  ],
+  'TV Shows': [
+    { id: 10, title: 'Project Kappa', thumbnail_url: '/images/2.png', details_link: '#' },
+    { id: 11, title: 'Project Lambda', thumbnail_url: '/images/1.png', details_link: '#' },
+    { id: 12, title: 'Project Mu', thumbnail_url: '/images/2.png', details_link: '#' },
+  ],
+})
 </script>
 
 <style scoped>
-/* Main container styling */
-.main-container {
+.page-wrapper {
   background-color: #141414;
-  color: white;
   min-height: 100vh;
-  padding-top: 0px;
-  padding-left: 20px;
-  margin-top: 1px; 
 }
 
-/* Category headings */
-.main-container h1 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 1px 0 1px 0;
-  color: #e5e5e5;
-}
-
-/* Box containers for project grids */
-.box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 3px;
-}
-
-/* Project links */
-.box a {
-  flex: 0 0 calc(16.666% - 15px); /* 6 items per row */
-  min-width: 200px;
-  transition: transform 0.3s ease;
-}
-
-.box a:hover {
-  transform: scale(1.05);
-}
-
-/* Project images */
-.box img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Responsive design */
-@media (max-width: 1200px) {
-  .box a {
-    flex: 0 0 calc(20% - 15px); /* 5 items per row */
-  }
-}
-
-@media (max-width: 768px) {
-  .box a {
-    flex: 0 0 calc(33.333% - 15px); /* 3 items per row */
-  }
-}
-
-@media (max-width: 480px) {
-  .box a {
-    flex: 0 0 calc(50% - 15px); /* 2 items per row */
-  }
-}
-
-/* Links section styling */
-.link {
-  background-color: #141414;
-  padding: 40px 20px;
-  border-top: 1px solid #333;
-}
-
-.logos {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-.logo {
-  color: #757575;
-  transition: color 0.3s ease;
-}
-
-.logo:hover {
-  color: #e50914;
-}
-
-.sub-links ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-}
-
-.sub-links a {
-  color: #757575;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.sub-links a:hover {
-  color: #e5e5e5;
+.content-container {
+  padding: 2rem 1.25rem;
+  color: white;
 }
 </style>
