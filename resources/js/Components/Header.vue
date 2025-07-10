@@ -1,5 +1,5 @@
 <template>
-  <div :class="['body-font fixed top-0 z-50 w-full text-white p-0 m-0 transition-all duration-300', isScrolled ? 'bg-black shadow-lg' : 'bg-transparent']">
+  <div :class="['body-font fixed top-0 z-50 w-full text-white p-0 m-0 transition-all duration-300', isScrolled ? 'bg-black shadow-lg' : 'bg-gradient-to-b from-black to-transparent']">
     <div class="flex flex-col flex-wrap items-center p-3 px-5 md:flex-row">
       <Link href="/" class="title-font mb-4 flex items-center text-2xl font-bold uppercase md:mb-0">
         <img src="/images/logo3.png" alt="Mubyflix logo" class="h-12 mr-3">
@@ -7,8 +7,8 @@
 
       <ul class="flex space-x-6 pl-8">
         <Link href="/browse"><li>Home</li></Link>
-        <Link href="#"><li>Skills</li></Link>
-        <Link href="#"><li>Projects</li></Link>
+        <Link href="/skills"><li>Skills</li></Link>
+        <Link href="/projects"><li>Projects</li></Link>
         <Link href="/contact"><li>Contact Me</li></Link>
       </ul>
 
