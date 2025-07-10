@@ -4,9 +4,9 @@
       <h1 class="Banner__title">{{ title }}</h1>
       <p class="Banner__description">{{ truncatedOverview }}</p>
       <div class="Banner__buttons">
-        <Link href="/play" class="Banner__button2">
+        <button @click="openResumeModal" class="Banner__button2">
           <i class=""></i> ▷ Resume
-        </Link>
+        </button>
         <button class="Banner__button" @click="showMoreInfo">
           <i class="fas fa-info-circle"></i> &nbspMore Info
         </button>
@@ -14,16 +14,35 @@
     </div>
     <div class="Banner__bottom-shadow" />
   </section>
+
+  <Modal :show="showResumeModal" @close="closeResumeModal">
+    <div class="p-4">
+      <iframe src="/resume.pdf#toolbar=0" style="width: 100%; height: 80vh;"></iframe>
+    </div>
+  </Modal>
 </template>
+
 <script setup>
 import { ref, computed } from 'vue'
-import { Link } from '@inertiajs/vue3'
+import Modal from './Modal.vue'
+
 const title = ref('Mubarak Ahmad - Full Stack Developer')
 const overview = ref('Hi, I\'m a passionate software engineering student with a love for building things that live on the internet. I’m currently learning the ins and outs of code, problem-solving, and turning ideas into working applications. This site is where I share my projects, thoughts, and progress along my journey as a developer.')
 const imgUrl = ref('/images/banner1.gif')
+const showResumeModal = ref(false)
+
 const truncatedOverview = computed(() =>
   overview.value.length > 350 ? overview.value.slice(0, 150) + '...' : overview.value
 )
+
+const openResumeModal = () => {
+  showResumeModal.value = true
+}
+
+const closeResumeModal = () => {
+  showResumeModal.value = false
+}
+
 const showMoreInfo = () => {
   console.log('Open modal for more info')
 }
