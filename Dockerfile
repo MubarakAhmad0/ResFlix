@@ -21,6 +21,9 @@ COPY . .
 # Install PHP dependencies
 RUN composer install --no-dev --optimize-autoloader
 
+# Create .env file
+RUN cp .env.example .env
+
 # Generate application key
 RUN php artisan key:generate
 
