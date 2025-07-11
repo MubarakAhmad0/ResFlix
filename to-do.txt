@@ -1,0 +1,3 @@
+the code for projects is still messy,
+cleanup the intro logo, chopped from the bottome
+add the add profiles and the manage profiles to browse
