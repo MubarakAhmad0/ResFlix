@@ -27,17 +27,17 @@ import Footer from '@/Components/Footer.vue'
 // Consider moving this to a composable or store
 const staticProjects = ref({
   'Today\'s Top Picks for Guest': [
-    { id: 1, title: 'Project Alpha', thumbnail_url: '/images/1.png', details_link: '/whoiswatching' },
-    { id: 2, title: 'Project Beta', thumbnail_url: '/images/2.png', details_link: '#' },
-    { id: 3, title: 'Project Gamma', thumbnail_url: '/images/1.png', details_link: '#' },
-    { id: 4, title: 'Project Delta', thumbnail_url: '/images/2.png', details_link: '#' },
-    { id: 5, title: 'Project Epsilon', thumbnail_url: '/images/1.png', details_link: '#' },
-    { id: 6, title: 'Project Zeta', thumbnail_url: '/images/1.png', details_link: '#' },
+    { id: 1, title: 'Project Alpha', thumbnail_url: '/images/images.jpeg', details_link: '/whoiswatching' },
+    { id: 2, title: 'Project Beta', thumbnail_url: '/images/images2.jpg', details_link: '#' },
+    { id: 3, title: 'Project Gamma', thumbnail_url: '/images/images4.jpg', details_link: '#' },
+    { id: 4, title: 'Project Delta', thumbnail_url: '/images/images2.jpg', details_link: '#' },
+    { id: 5, title: 'Project Epsilon', thumbnail_url: '/images/images4.jpg', details_link: '#' },
+    { id: 6, title: 'Project Zeta', thumbnail_url: '/images/images2.jpg', details_link: '#' },
   ],
   'Trending Now': [
     { id: 7, title: 'Project Eta', thumbnail_url: '/images/1.png', details_link: '#' },
     { id: 8, title: 'Project Theta', thumbnail_url: '/images/2.png', details_link: '#' },
-    { id: 9, title: 'Project Iota', thumbnail_url: '/images/1.png', details_link: '#' },
+    { id: 9, title: 'Project Iota', thumbnail_url: '/images/images4.jpg', details_link: '#' },
   ],
   'TV Shows': [
     { id: 10, title: 'Project Kappa', thumbnail_url: '/images/2.png', details_link: '#' },

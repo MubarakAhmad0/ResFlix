@@ -22,20 +22,19 @@
 import Header from '@/Components/Header.vue'
 import CarouselCard from '@/Components/Carousel.vue'
 
-// Define carousel items data
 const carouselItems = [
   {
-    image: 'https://images.pexels.com/photos/635699/pexels-photo-635699.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    alt: 'The Cross',
-    title: 'The Cross',
-    description: 'The Cross is a central symbol of Easter, representing the crucifixion of Jesus Christ and his sacrifice for humanity. It serves as a reminder of suffering, love, and redemption, and is often displayed during Holy Week and Easter Sunday to honor the foundation of Christian faith.',
+    image: '/images/ehealth.png',
+    alt: 'eHealth',
+    title: 'eHealth System',
+    description: 'The eHealth System is a comprehensive digital platform designed to streamline healthcare services, track student health status, manage hostel assignments for sick and healthy students, automatically track and assign hostel rooms, and facilitate appointment making to enhance the overall efficiency of virus breakout containment.',
     link: '#',
     linkText: 'Read more'
   },
   {
-    image: 'https://images.pexels.com/photos/7168798/pexels-photo-7168798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    alt: 'Easter Eggs',
-    title: 'Easter Eggs',
+    image: '/images/talent_connect.png',
+    alt: 'Talent Connect',
+    title: 'Talent Connect',
     description: 'Easter eggs are a colorful symbol of new life and rebirth, often decorated and hidden for festive hunts. The tradition comes from ancient spring rituals and was later adopted into Easter celebrations to represent the resurrection.',
     link: '#',
     linkText: 'Read more'
@@ -43,16 +42,16 @@ const carouselItems = [
   {
     image: 'https://images.pexels.com/photos/4099179/pexels-photo-4099179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     alt: 'Hot Cross Buns',
-    title: 'Hot Cross Buns',
-    description: 'Hot cross buns are sweet, spiced buns marked with a cross on top, traditionally eaten on Good Friday. They originated in England and symbolize the crucifixion, with the cross representing Jesus and the spices recalling burial traditions.',
+    title: 'Lorem Ipsum',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     link: '#',
     linkText: 'Read more'
   },
   {
     image: 'https://images.pexels.com/photos/5145/animal-easter-chick-chicken.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     alt: 'Easter Chick',
-    title: 'Easter Chick',
-    description: 'Easter chicks are a cheerful symbol of new life and beginnings, often seen alongside eggs in spring decorations. They represent birth and renewal, tying into the themes of Easter and the arrival of spring.',
+    title: 'Lorem Ipsum',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     link: '#',
     linkText: 'Read more'
   },
@@ -67,10 +66,10 @@ const carouselItems = [
   {
     image: 'https://images.pexels.com/photos/12787666/pexels-photo-12787666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     alt: 'Crown of Thorns',
-    title: 'Crown of Thorns',
-    description: 'The Crown of Thorns symbolizes the suffering of Jesus before his crucifixion. It represents the pain he endured for humanity\'s salvation and is a reminder of his sacrifice during Easter.',
+    title: 'Lorem Ipsum',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     link: '#',
-    linkText: 'Redsasmore'
+    linkText: 'Read more'
   }
 ]
 </script>
