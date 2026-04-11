@@ -49,6 +49,14 @@ const showMoreInfo = () => {
 </script>
 
 <style scoped>
+/* @font-face must be at the root level of the style block */
+@font-face {
+  font-family: 'BabasNeue';
+  src: url('/fonts/BabasNeue.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .Banner {
   height: 70vh;
   background-size: cover;
@@ -59,19 +67,6 @@ const showMoreInfo = () => {
   align-items: flex-end;
 }
 
-.Banner__title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  font-family: 'BabasNeue', sans-serif;
-  @font-face {
-    font-family: 'BabasNeue';
-    src: url('/fonts/BabasNeue.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-}
-
 .Banner__content {
   padding: 2rem;
   max-width: 850px;
@@ -79,9 +74,48 @@ const showMoreInfo = () => {
   position: relative;
 }
 
+/* ── Entrance Animations ─────────────────────────────── */
+
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Banner__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: 'BabasNeue', sans-serif;
+  
+  /* Animation */
+  opacity: 0;
+  animation: heroFadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.1s;
+}
+
+.Banner__description {
+  /* Animation */
+  opacity: 0;
+  animation: heroFadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.3s;
+}
+
 .Banner__buttons {
   margin-top: 1.5rem;
+  
+  /* Animation */
+  opacity: 0;
+  animation: heroFadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  animation-delay: 0.5s;
 }
+
+/* ── Button Styles ───────────────────────────────────── */
 
 .Banner__button {
   background-color: rgba(109, 109, 110, 0.7);
@@ -91,6 +125,7 @@ const showMoreInfo = () => {
   border-radius: 5px;
   color: white;
   cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .Banner__button2 {
@@ -103,14 +138,14 @@ const showMoreInfo = () => {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.Banner__button:hover {
-  background-color: grey;
-}
-
+/* Added a slight scale on hover to make the buttons feel more interactive */
+.Banner__button:hover,
 .Banner__button2:hover {
   background-color: grey;
+  transform: scale(1.05);
 }
 
 .Banner__bottom-shadow {

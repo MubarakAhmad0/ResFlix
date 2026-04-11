@@ -1,7 +1,8 @@
 <template>
   <div class="skills-container">
     <Header />
-    <div class="skills-section">
+    
+    <div class="skills-section section-1">
       <h2>Programming Languages</h2>
       <div class="grid">
         <SkillCard skillName="Python">
@@ -12,7 +13,6 @@
         </SkillCard>
         <SkillCard skillName="TypeScript">
           <template #icon>
-            <!-- Official TypeScript logo: blue square with "TS" -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <rect width="128" height="128" rx="6" fill="#3178c6"/>
               <text x="64" y="90" text-anchor="middle" font-size="64" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">TS</text>
@@ -22,7 +22,6 @@
         </SkillCard>
         <SkillCard skillName="Java">
           <template #icon>
-            <!-- Java: classic "coffee cup" style logo -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <path fill="#0074BD" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"/>
               <path fill="#EA2D2E" d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 0-42.731 10.67-22.324 34.187z"/>
@@ -35,7 +34,6 @@
         </SkillCard>
         <SkillCard skillName="C++">
           <template #icon>
-            <!-- C++ logo: blue circle with C++ text -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <circle cx="64" cy="64" r="60" fill="#00599C"/>
               <text x="64" y="78" text-anchor="middle" font-size="44" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">C++</text>
@@ -51,7 +49,6 @@
         </SkillCard>
         <SkillCard skillName="JavaScript">
           <template #icon>
-            <!-- Official JS logo: yellow square with "JS" -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <rect width="128" height="128" fill="#f7df1e"/>
               <text x="64" y="96" text-anchor="middle" font-size="72" font-family="Arial, Helvetica, sans-serif" fill="#323330" font-weight="bold">JS</text>
@@ -72,12 +69,12 @@
         </SkillCard>
       </div>
     </div>
-    <div class="skills-section">
+    
+    <div class="skills-section section-2">
       <h2>Backend</h2>
       <div class="grid">
         <SkillCard skillName="PHP">
           <template #icon>
-            <!-- PHP logo: purple ellipse with PHP text -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <ellipse cx="64" cy="64" rx="62" ry="40" fill="#8892BF"/>
               <text x="64" y="72" text-anchor="middle" font-size="34" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">PHP</text>
@@ -103,7 +100,6 @@
         </SkillCard>
         <SkillCard skillName="Next.js">
           <template #icon>
-            <!-- Next.js logo: black square with white "N" lettermark -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <rect width="128" height="128" rx="6" fill="#000"/>
               <text x="64" y="96" text-anchor="middle" font-size="80" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">N</text>
@@ -113,7 +109,6 @@
         </SkillCard>
         <SkillCard skillName="Express">
           <template #icon>
-            <!-- Express: dark background with white "Ex" text -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <rect width="128" height="128" rx="6" fill="#333"/>
               <text x="64" y="82" text-anchor="middle" font-size="50" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">Ex</text>
@@ -123,7 +118,6 @@
         </SkillCard>
         <SkillCard skillName="Flask">
           <template #icon>
-            <!-- Flask: simple laboratory flask shape -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <path fill="#333" d="M48 8h32v40l28 56a8 8 0 01-7.2 11.5H27.2A8 8 0 0120 104l28-56V8z"/>
               <path fill="#555" d="M48 64l-22 44h72L76 64H48z"/>
@@ -134,7 +128,6 @@
         </SkillCard>
         <SkillCard skillName="FastAPI">
           <template #icon>
-            <!-- FastAPI: teal square with lightning bolt -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <rect width="128" height="128" rx="6" fill="#009688"/>
               <polygon points="72,12 36,72 60,72 56,116 92,56 68,56" fill="#fff"/>
@@ -144,7 +137,6 @@
         </SkillCard>
         <SkillCard skillName="Django">
           <template #icon>
-            <!-- Django: dark green square with "Dj" text -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <rect width="128" height="128" rx="6" fill="#092E20"/>
               <text x="64" y="90" text-anchor="middle" font-size="62" font-family="Georgia, serif" fill="#fff" font-weight="bold">Dj</text>
@@ -154,7 +146,8 @@
         </SkillCard>
       </div>
     </div>
-    <div class="skills-section">
+    
+    <div class="skills-section section-3">
       <h2>Frontend</h2>
       <div class="grid">
         <SkillCard skillName="Vue.js">
@@ -186,12 +179,12 @@
         </SkillCard>
       </div>
     </div>
-    <div class="skills-section">
+    
+    <div class="skills-section section-4">
       <h2>Database</h2>
       <div class="grid">
         <SkillCard skillName="MySQL">
           <template #icon>
-            <!-- MySQL: orange/blue dolphin-style logo simplified -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <rect width="128" height="128" rx="6" fill="#00758F"/>
               <text x="64" y="78" text-anchor="middle" font-size="28" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">MySQL</text>
@@ -201,7 +194,6 @@
         </SkillCard>
         <SkillCard skillName="PostgreSQL">
           <template #icon>
-            <!-- PostgreSQL: blue square with elephant/PG text -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <rect width="128" height="128" rx="6" fill="#336791"/>
               <text x="64" y="78" text-anchor="middle" font-size="28" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">PgSQL</text>
@@ -211,12 +203,12 @@
         </SkillCard>
       </div>
     </div>
-    <div class="skills-section">
+    
+    <div class="skills-section section-5">
       <h2>Other</h2>
       <div class="grid">
         <SkillCard skillName="Git">
           <template #icon>
-            <!-- Git: official orange with branching icon -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <rect width="128" height="128" rx="16" fill="#F05032"/>
               <circle cx="40" cy="88" r="12" fill="#fff"/>
@@ -230,19 +222,15 @@
         </SkillCard>
         <SkillCard skillName="Docker">
           <template #icon>
-            <!-- Docker: blue whale logo simplified -->
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
               <rect width="128" height="128" rx="6" fill="#2496ED"/>
-              <!-- Container stack blocks -->
               <rect x="20" y="56" width="18" height="14" rx="2" fill="#fff"/>
               <rect x="42" y="56" width="18" height="14" rx="2" fill="#fff"/>
               <rect x="64" y="56" width="18" height="14" rx="2" fill="#fff"/>
               <rect x="42" y="38" width="18" height="14" rx="2" fill="#fff"/>
               <rect x="64" y="38" width="18" height="14" rx="2" fill="#fff"/>
               <rect x="64" y="20" width="18" height="14" rx="2" fill="#fff"/>
-              <!-- Whale body -->
               <path d="M18 76 Q20 96 64 96 Q100 96 108 80 Q116 76 112 70 Q108 70 106 74 Q100 86 64 86 Q28 86 22 74 Z" fill="#fff"/>
-              <!-- Whale tail -->
               <path d="M108 70 Q118 60 114 50 Q110 55 108 62 Z" fill="#fff"/>
             </svg>
           </template>
@@ -252,22 +240,28 @@
     </div>
   </div>
 </template>
+
 <script setup>
 import Header from '@/Components/Header.vue';
 import SkillCard from '@/Components/SkillCard.vue';
 </script>
+
 <style scoped>
 @font-face {
   font-family: 'BebasNeue';
   src: url('/fonts/BebasNeue.otf') format('opentype');
 }
+
 .skills-container {
   text-align: center;
   padding-top: 100px;
+  padding-bottom: 60px;
 }
+
 .skills-section {
   margin-top: 40px;
 }
+
 h2 {
   margin-bottom: 20px;
   font-size: 32px;
@@ -278,10 +272,93 @@ h2 {
   text-underline-offset: 7px;
   text-decoration-thickness: 2px;
 }
+
 .grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 32px;
 }
+
+/* ── Custom Animations ─────────────────────────────── */
+
+/* 1. Simple fade and drift for headers */
+@keyframes simpleFade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 2. Softer, elegant pop for cards */
+@keyframes softPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.02) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Base styles for the animated elements */
+.skills-section h2 {
+  opacity: 0;
+  animation: simpleFade 0.6s ease-out forwards;
+}
+
+.grid > * {
+  opacity: 0;
+  animation: softPop 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* ── Strict Sequential Stagger Logic (Bulletproof) ───── */
+
+/* Section 1 (Programming Languages - 7 cards) */
+.section-1 h2 { animation-delay: 0.10s; }
+.section-1 .grid > *:nth-child(1) { animation-delay: 0.15s; }
+.section-1 .grid > *:nth-child(2) { animation-delay: 0.20s; }
+.section-1 .grid > *:nth-child(3) { animation-delay: 0.25s; }
+.section-1 .grid > *:nth-child(4) { animation-delay: 0.30s; }
+.section-1 .grid > *:nth-child(5) { animation-delay: 0.35s; }
+.section-1 .grid > *:nth-child(6) { animation-delay: 0.40s; }
+.section-1 .grid > *:nth-child(7) { animation-delay: 0.45s; }
+
+/* Section 2 (Backend - 8 cards) */
+.section-2 h2 { animation-delay: 0.55s; }
+.section-2 .grid > *:nth-child(1) { animation-delay: 0.60s; }
+.section-2 .grid > *:nth-child(2) { animation-delay: 0.65s; }
+.section-2 .grid > *:nth-child(3) { animation-delay: 0.70s; }
+.section-2 .grid > *:nth-child(4) { animation-delay: 0.75s; }
+.section-2 .grid > *:nth-child(5) { animation-delay: 0.80s; }
+.section-2 .grid > *:nth-child(6) { animation-delay: 0.85s; }
+.section-2 .grid > *:nth-child(7) { animation-delay: 0.90s; }
+.section-2 .grid > *:nth-child(8) { animation-delay: 0.95s; }
+
+/* Section 3 (Frontend - 4 cards) */
+.section-3 h2 { animation-delay: 1.05s; }
+.section-3 .grid > *:nth-child(1) { animation-delay: 1.10s; }
+.section-3 .grid > *:nth-child(2) { animation-delay: 1.15s; }
+.section-3 .grid > *:nth-child(3) { animation-delay: 1.20s; }
+.section-3 .grid > *:nth-child(4) { animation-delay: 1.25s; }
+
+/* Section 4 (Database - 2 cards) */
+.section-4 h2 { animation-delay: 1.35s; }
+.section-4 .grid > *:nth-child(1) { animation-delay: 1.40s; }
+.section-4 .grid > *:nth-child(2) { animation-delay: 1.45s; }
+
+/* Section 5 (Other - 2 cards) */
+.section-5 h2 { animation-delay: 1.55s; }
+.section-5 .grid > *:nth-child(1) { animation-delay: 1.60s; }
+.section-5 .grid > *:nth-child(2) { animation-delay: 1.65s; }
+
 </style>

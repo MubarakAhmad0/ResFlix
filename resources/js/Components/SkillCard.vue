@@ -85,7 +85,7 @@ defineProps({
   border-radius: 15px;
   cursor: pointer;
   position: relative;
-  transition: box-shadow .25s;
+  transition: box-shadow .25s, transform .25s ease;
   width: 240px;
 }
 
@@ -147,7 +147,7 @@ p {
   font-size: 14px;
   line-height: 1.7;
   text-align: left;
-  color: var(--text-color);
+  color: var(--text-color, #a1a1aa); /* Added fallback color */
 }
 
 .shine {
@@ -277,7 +277,16 @@ p {
 .line.line-3:before { top: 55%; }
 .line.line-3:after { right: 22.5%; }
 
+/* ── Hover Effects ───────────────────────────────────────── */
+
+/* New subtle float keyframe for the icon */
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
 .card:hover {
+  transform: translateY(-2px); /* Slight lift on the card itself */
   box-shadow: 0px 3px 6px var(--card-hover-box-shadow-1), 0px var(--card-hover-box-shadow-2-y) var(--card-hover-box-shadow-2-blur) var(--card-hover-box-shadow-2), 0 0 0 1px var(--card-hover-border-color);
 }
 
@@ -288,6 +297,7 @@ p {
 
 .card:hover .icon svg {
   color: var(--card-hover-icon-color);
+  animation: floatIcon 2s ease-in-out infinite; /* Trigger float on hover */
 }
 
 .card:hover .shine {

@@ -4,6 +4,7 @@
     <Banner type="series" />
 
     <main class="content-container">
+      
       <ProjectSection
         v-for="(projects, category) in staticProjects"
         :key="category"
@@ -13,12 +14,12 @@
       />
 
       <section class="project-section">
-        <h2 class="section-title">
+        <h2 class="section-title animate-title" style="animation-delay: 0.3s;">
           <span class="title-badge series-badge">Series</span>
           Experience
         </h2>
         <div class="projects-grid">
-          <div class="card-cell">
+          <div class="card-cell animate-card" style="animation-delay: 0.4s;">
             <a href="#" class="project-card" @click.prevent="toggleEpisodes">
               <div class="card-bg bloomthis-bg">
                 <div class="card-svg-wrap">
@@ -77,12 +78,17 @@
       </section>
 
       <section class="project-section">
-        <h2 class="section-title">
+        <h2 class="section-title animate-title" style="animation-delay: 0.6s;">
           <span class="title-badge">Certified</span>
           Certifications
         </h2>
         <div class="projects-grid">
-          <div v-for="cert in certifications" :key="cert.id" class="card-cell">
+          <div 
+            v-for="(cert, index) in certifications" 
+            :key="cert.id" 
+            class="card-cell animate-card"
+            :style="{ 'animation-delay': `${0.7 + (index * 0.08)}s` }"
+          >
             <a href="#" class="project-card">
               <div class="card-bg" :style="{ background: cert.color }">
                 <div class="card-svg-wrap">
@@ -99,12 +105,17 @@
       </section>
 
       <section class="project-section">
-        <h2 class="section-title">
+        <h2 class="section-title animate-title" style="animation-delay: 1.0s;">
           <span class="title-badge coming-badge">On Radar</span>
           Coming Soon
         </h2>
         <div class="projects-grid">
-          <div v-for="item in comingSoon" :key="item.id" class="card-cell">
+          <div 
+            v-for="(item, index) in comingSoon" 
+            :key="item.id" 
+            class="card-cell animate-card"
+            :style="{ 'animation-delay': `${1.1 + (index * 0.08)}s` }"
+          >
             <a href="#" class="project-card" @click.prevent>
               <div class="card-bg soon-bg">
                 <div class="soon-ribbon">TBA</div>
@@ -467,7 +478,6 @@ const comingSoon = ref([
   bottom: 0;
   left: 0;
   right: 0;
-  /* Reverted to original opacity */
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
   padding: 1.5rem 0.75rem 0.6rem;
   opacity: 0;
@@ -544,7 +554,44 @@ const comingSoon = ref([
   border: 1px solid #555; 
 }
 
-/* ── Staggered Episode Animations ───────────────────── */
+/* ── Animations ──────────────────────────────────────── */
+
+@keyframes simpleFade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes softPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(20px);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.02) translateY(-2px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-title {
+  opacity: 0;
+  animation: simpleFade 0.6s ease-out forwards;
+}
+
+.animate-card {
+  opacity: 0;
+  animation: softPop 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
 .fade-slide-enter-active {
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
   transition-delay: var(--delay);
