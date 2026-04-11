@@ -1,6 +1,19 @@
 <template>
   <div class="wrapper">
     <Header />
+
+    <div class="headline-section">
+      <p class="label">Selected Work</p>
+      <h1 class="headline">
+        Things I've<br />
+        <span class="accent">Built.</span>
+      </h1>
+      <p class="subline">
+        A collection of projects spanning web, mobile, systems, and AI —
+        from internship-grade production features to academic deep-dives.
+      </p>
+    </div>
+
     <div class="carousel-container">
       <div class="carousel" mask>
         <CarouselCard
@@ -12,9 +25,12 @@
           :description="item.description"
           :link="item.link"
           :link-text="item.linkText"
+          :tags="item.tags"
         />
       </div>
     </div>
+
+    <p class="scroll-hint">← Hover to pause · Scroll to explore →</p>
   </div>
 </template>
 
@@ -25,84 +41,153 @@ import CarouselCard from '@/Components/Carousel.vue'
 const carouselItems = [
   {
     image: '/images/ehealth.png',
-    alt: 'eHealth',
+    alt: 'eHealth System',
     title: 'eHealth System',
-    description: 'The eHealth System is a comprehensive digital platform designed to streamline healthcare services, track student health status, manage hostel assignments for sick and healthy students, automatically track and assign hostel rooms, and facilitate appointment making to enhance the overall efficiency of virus breakout containment.',
+    description: 'A comprehensive digital platform to streamline healthcare services — tracks student health, manages hostel assignments for sick and healthy students, and facilitates appointment booking to contain virus outbreaks.',
     link: '#',
-    linkText: 'Read more'
+    linkText: 'View Project',
+    tags: ['PHP', 'MySQL', 'XAMPP']
   },
   {
     image: '/images/talent_connect.png',
     alt: 'Talent Connect',
-    title: 'Talent Connect',
-    description: 'Easter eggs are a colorful symbol of new life and rebirth, often decorated and hidden for festive hunts. The tradition comes from ancient spring rituals and was later adopted into Easter celebrations to represent the resurrection.',
+    title: 'Talent Connect Portal',
+    description: 'A portfolio-sharing platform where students and professionals showcase their work. Features authentication, role-based admin controls, and a clean browsable directory of talent profiles.',
     link: '#',
-    linkText: 'Read more'
+    linkText: 'View Project',
+    tags: ['PHP', 'MySQL', 'HTML']
   },
   {
-    image: 'https://images.pexels.com/photos/4099179/pexels-photo-4099179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    alt: 'Hot Cross Buns',
-    title: 'Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    image: '/images/food_delivery.png',
+    alt: 'Food Delivery App',
+    title: 'Grab-Style Food Delivery',
+    description: 'A full-featured food delivery app inspired by Grab — with ordering, cart management, live order tracking, and Firebase-backed authentication. Built with a modern Laravel + Vue.js + Inertia stack.',
     link: '#',
-    linkText: 'Read more'
+    linkText: 'View Project',
+    tags: ['Laravel', 'Vue.js', 'Firebase', 'Inertia']
   },
   {
-    image: 'https://images.pexels.com/photos/5145/animal-easter-chick-chicken.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    alt: 'Easter Chick',
-    title: 'Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    image: '/images/hostel.png',
+    alt: 'Hostel Management',
+    title: 'Hostel Management System',
+    description: 'End-to-end hostel administration system handling room allocation, resident tracking, and payments — all with role-based access control to separate student, staff, and admin views.',
     link: '#',
-    linkText: 'Read more'
+    linkText: 'View Project',
+    tags: ['Python', 'Django', 'MySQL']
   },
   {
-    image: 'https://images.pexels.com/photos/2072158/pexels-photo-2072158.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    alt: 'Easter Bunny',
-    title: 'Easter Bunnies',
-    description: 'Easter bunnies are a popular symbol of spring and new life, often seen delivering colorful eggs to children.',
+    image: '/images/finance_app.png',
+    alt: 'Financial Planner App',
+    title: 'Student Finance Planner',
+    description: 'A native Android app built with Jetpack Compose that gives students AI-powered financial insights, real-time transaction tracking, and budget visualisation — all stored locally with Room DB.',
     link: '#',
-    linkText: 'Read more'
+    linkText: 'View Project',
+    tags: ['Kotlin', 'Jetpack Compose', 'Room DB', 'AI/ML']
   },
   {
-    image: 'https://images.pexels.com/photos/12787666/pexels-photo-12787666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    alt: 'Crown of Thorns',
-    title: 'Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    image: '/images/route_viz.png',
+    alt: 'Route Visualizer',
+    title: 'C++ Route Visualizer',
+    description: 'An interactive graph algorithm visualiser that renders Dijkstra, BFS, and DFS step-by-step in real time using SFML. Demonstrates pathfinding visually on custom graph inputs.',
     link: '#',
-    linkText: 'Read more'
-  }
+    linkText: 'View Project',
+    tags: ['C++', 'SFML', 'Graph Theory']
+  },
+  {
+    image: '/images/drawing_app.png',
+    alt: 'Drawing App',
+    title: 'Drawing & Image Editor',
+    description: 'A Java Swing desktop app with full image editing capabilities — filters, layers, drawing tools, and an undo/redo stack. A hand-built Photoshop-lite in pure Java.',
+    link: '#',
+    linkText: 'View Project',
+    tags: ['Java', 'Swing']
+  },
+  {
+    image: '/images/vending.png',
+    alt: 'Vending Machine Simulator',
+    title: 'NFA vs DFA Simulator',
+    description: 'A vending machine simulator that demonstrates the difference between Nondeterministic and Deterministic Finite Automata through an interactive UI — bringing Theory of Computation to life.',
+    link: '#',
+    linkText: 'View Project',
+    tags: ['JavaScript', 'Python', 'NiceGUI']
+  },
 ]
 </script>
 
 <style scoped>
-@import url(https://fonts.bunny.net/css?family=abel:400);
+@import url('https://fonts.bunny.net/css?family=abel:400');
+@import url('https://fonts.bunny.net/css?family=syne:700,800&display=swap');
+@import url('https://fonts.bunny.net/css?family=dm-mono:400,500&display=swap');
 
-/* Wrapper and Container Styles */
+/* ── Layout ─────────────────────────────────────────── */
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  gap: 2rem;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
 }
 
+/* ── Headline ────────────────────────────────────────── */
+.headline-section {
+  text-align: center;
+  max-width: 680px;
+  padding: 0 1.5rem;
+  margin-top: 1rem;
+}
+
+.label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #e50914;
+  margin: 0 0 0.75rem;
+  opacity: 0.9;
+}
+
+.headline {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1.0;
+  margin: 0 0 1.1rem;
+  color: inherit;
+  letter-spacing: -0.02em;
+}
+
+.accent {
+  color: #e50914;
+  font-style: italic;
+}
+
+.subline {
+  font-family: 'Abel', sans-serif;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
+  line-height: 1.7;
+  opacity: 0.6;
+  margin: 0;
+  max-width: 520px;
+  margin-inline: auto;
+}
+
+/* ── Carousel Container ──────────────────────────────── */
 .carousel-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  flex: 1;
 }
 
-/* Carousel Styles */
+/* ── Carousel ────────────────────────────────────────── */
 .carousel {
-  --items: 6;
-  --carousel-duration: 40s;
-  --carousel-width: min(80vw, 1200px);
-  --carousel-item-width: 280px;
-  --carousel-item-height: 600px;
-  --carousel-item-gap: 6rem;
-  --clr-cta: rgb(0, 132, 209);
+  --items: 8;
+  --carousel-duration: 55s;
+  --carousel-width: min(90vw, 1300px);
+  --carousel-item-width: 300px;
+  --carousel-item-height: 580px;
+  --carousel-item-gap: 5rem;
 
   position: relative;
   width: var(--carousel-width);
@@ -112,16 +197,15 @@ const carouselItems = [
 
 @media (width > 600px) {
   .carousel {
-    --carousel-duration: 30s;
+    --carousel-duration: 45s;
   }
 }
 
 .carousel[mask] {
-  /* fade out on sides */
   mask-image: linear-gradient(
     to right,
     transparent,
-    black 10% 90%,
+    black 12% 88%,
     transparent
   );
 }
@@ -130,35 +214,17 @@ const carouselItems = [
   animation-direction: reverse;
 }
 
-/* hover pauses animation */
 .carousel:hover > :deep(article) {
   animation-play-state: paused;
 }
 
-/* General Styling */
-* {
-  box-sizing: border-box;
-}
-
-:root {
-  color-scheme: light dark;
-  --bg-dark: rgb(2, 6, 24);
-  --bg-light: rgb(229, 229, 229);
-  --txt-light: rgb(10, 10, 10);
-  --txt-dark: rgb(245, 245, 245);
-}
-
-body {
-  background-color: light-dark(var(--bg-light), var(--bg-dark));
-  color: light-dark(var(--txt-light), var(--txt-dark));
-  min-height: 100svh;
+/* ── Scroll hint ─────────────────────────────────────── */
+.scroll-hint {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.35;
   margin: 0;
-  padding: 1rem;
-  font-size: 1rem;
-  font-family: "Abel", sans-serif;
-  line-height: 1.5;
-  display: grid;
-  place-items: center;
-  gap: 2rem;
 }
 </style>

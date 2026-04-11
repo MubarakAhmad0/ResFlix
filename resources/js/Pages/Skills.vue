@@ -1,19 +1,90 @@
 <template>
   <div class="skills-container">
     <Header />
-
+    <div class="skills-section">
+      <h2>Programming Languages</h2>
+      <div class="grid">
+        <SkillCard skillName="Python">
+          <template #icon>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128"><path fill="#3776ab" d="M63.397 4.797c-15.74 0-30.27 1.734-28.41 17.34l.79 6.643h27.62v3.156H17.794c-13.345 0-16.16 11.706-16.16 20.52 0 10.386 7.52 17.34 19.29 17.34h11.13v-8.27c0-8.96 7.66-16.76 16.62-16.76h19.82c7.49 0 13.45-6.14 13.45-13.63V12.12c0-7.1-5.96-7.323-13.45-7.323zm-9.45 5.53c2.56 0 4.65 2.09 4.65 4.65 0 2.56-2.09 4.65-4.65 4.65-2.56 0-4.65-2.09-4.65-4.65 0-2.56 2.09-4.65 4.65-4.65z"/><path fill="#ffd43b" d="M64.603 123.203c15.74 0 30.27-1.734 28.41-17.34l-.79-6.643h-27.62v-3.156h45.603c13.345 0 16.16-11.706 16.16-20.52 0-10.386-7.52-17.34-19.29-17.34h-11.13v8.27c0 8.96-7.66 16.76-16.62 16.76h-19.82c-7.49 0-13.45 6.14-13.45 13.63v18.996c0 7.1 5.96 7.323 13.45 7.323zm9.45-5.53c-2.56 0-4.65-2.09-4.65-4.65 0-2.56 2.09-4.65 4.65-4.65 2.56 0 4.65 2.09 4.65 4.65 0 2.56-2.09 4.65-4.65 4.65z"/></svg>
+          </template>
+          <template #description>A versatile, high-level programming language widely used in web development, data science, AI/ML, automation, and scripting.</template>
+        </SkillCard>
+        <SkillCard skillName="TypeScript">
+          <template #icon>
+            <!-- Official TypeScript logo: blue square with "TS" -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <rect width="128" height="128" rx="6" fill="#3178c6"/>
+              <text x="64" y="90" text-anchor="middle" font-size="64" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">TS</text>
+            </svg>
+          </template>
+          <template #description>A strongly-typed superset of JavaScript that adds static typing, enhanced tooling, and better code maintainability for large-scale applications.</template>
+        </SkillCard>
+        <SkillCard skillName="Java">
+          <template #icon>
+            <!-- Java: classic "coffee cup" style logo -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <path fill="#0074BD" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"/>
+              <path fill="#EA2D2E" d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 0-42.731 10.67-22.324 34.187z"/>
+              <path fill="#0074BD" d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0 .001.364-.327.468-.617z"/>
+              <path fill="#EA2D2E" d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z"/>
+              <path fill="#0074BD" d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z"/>
+            </svg>
+          </template>
+          <template #description>A robust, object-oriented programming language used for building enterprise-scale applications, Android apps, and backend systems.</template>
+        </SkillCard>
+        <SkillCard skillName="C++">
+          <template #icon>
+            <!-- C++ logo: blue circle with C++ text -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <circle cx="64" cy="64" r="60" fill="#00599C"/>
+              <text x="64" y="78" text-anchor="middle" font-size="44" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">C++</text>
+            </svg>
+          </template>
+          <template #description>A powerful, high-performance programming language used for system programming, game development, and performance-critical applications.</template>
+        </SkillCard>
+        <SkillCard skillName="Kotlin">
+          <template #icon>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128"><defs><linearGradient id="kotlinGrad" x1="50%" y1="0%" x2="50%" y2="100%"><stop offset="0%" stop-color="#7F52FF"/><stop offset="100%" stop-color="#E68900"/></linearGradient></defs><path fill="url(#kotlinGrad)" d="M0 128V0h64L0 65.05zM64 128L128 0H64v128z"/></svg>
+          </template>
+          <template #description>A modern, statically-typed programming language developed by JetBrains, primarily used for Android development and cross-platform applications.</template>
+        </SkillCard>
+        <SkillCard skillName="JavaScript">
+          <template #icon>
+            <!-- Official JS logo: yellow square with "JS" -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <rect width="128" height="128" fill="#f7df1e"/>
+              <text x="64" y="96" text-anchor="middle" font-size="72" font-family="Arial, Helvetica, sans-serif" fill="#323330" font-weight="bold">JS</text>
+            </svg>
+          </template>
+          <template #description>A high-level, interpreted programming language primarily used for making web pages interactive and enabling client-side and server-side development.</template>
+        </SkillCard>
+        <SkillCard skillName="SQL">
+          <template #icon>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <ellipse cx="64" cy="32" rx="52" ry="18" fill="#e50914"/>
+              <path d="M12 32v20c0 9.94 23.13 18 52 18s52-8.06 52-18V32c0 9.94-23.13 18-52 18S12 41.94 12 32z" fill="#c0070f"/>
+              <path d="M12 52v20c0 9.94 23.13 18 52 18s52-8.06 52-18V52c0 9.94-23.13 18-52 18S12 61.94 12 52z" fill="#e50914"/>
+              <path d="M12 72v20c0 9.94 23.13 18 52 18s52-8.06 52-18V72c0 9.94-23.13 18-52 18S12 81.94 12 72z" fill="#c0070f"/>
+            </svg>
+          </template>
+          <template #description>Structured Query Language used for managing and manipulating relational databases, including querying, updating, and schema design.</template>
+        </SkillCard>
+      </div>
+    </div>
     <div class="skills-section">
       <h2>Backend</h2>
       <div class="grid">
         <SkillCard skillName="PHP">
           <template #icon>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-6 h-6">
-              <text x="24" y="29" text-anchor="middle" font-size="17" font-family="Arial, Helvetica, sans-serif" fill="#e50914" font-weight="bold">PHP</text>
+            <!-- PHP logo: purple ellipse with PHP text -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <ellipse cx="64" cy="64" rx="62" ry="40" fill="#8892BF"/>
+              <text x="64" y="72" text-anchor="middle" font-size="34" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">PHP</text>
             </svg>
           </template>
           <template #description>A general-purpose scripting language geared towards web development.</template>
         </SkillCard>
-
         <SkillCard skillName="Laravel">
           <template #icon>
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="24px" width="24px" viewBox="0 0 128 128" version="1.1">
@@ -24,16 +95,65 @@
           </template>
           <template #description>A popular open-source PHP web framework used for building robust web applications following the model-view-controller (MVC) architectural pattern.</template>
         </SkillCard>
-
-        <SkillCard skillName="MySQL">
+        <SkillCard skillName="Node.js">
           <template #icon>
-            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128"><path fill="#e50914" d="M116.948 97.807c-6.863-.187-12.104.452-16.585 2.341-1.273.537-3.305.552-3.513 2.147.7.733.809 1.829 1.365 2.731 1.07 1.73 2.876 4.052 4.488 5.268 1.762 1.33 3.577 2.751 5.465 3.902 3.358 2.047 7.107 3.217 10.34 5.268 1.906 1.21 3.799 2.733 5.658 4.097.92.675 1.537 1.724 2.732 2.147v-.194c-.628-.8-.79-1.898-1.366-2.733l-2.537-2.537c-2.48-3.292-5.629-6.184-8.976-8.585-2.669-1.916-8.642-4.504-9.755-7.609l-.195-.195c1.892-.214 4.107-.898 5.854-1.367 2.934-.786 5.556-.583 8.585-1.365l4.097-1.171v-.78c-1.531-1.571-2.623-3.651-4.292-5.073-4.37-3.72-9.138-7.437-14.048-10.537-2.724-1.718-6.089-2.835-8.976-4.292-.971-.491-2.677-.746-3.318-1.562-1.517-1.932-2.342-4.382-3.511-6.633-2.449-4.717-4.854-9.868-7.024-14.831-1.48-3.384-2.447-6.72-4.293-9.756-8.86-14.567-18.396-23.358-33.169-32-3.144-1.838-6.929-2.563-10.929-3.513-2.145-.129-4.292-.26-6.438-.391-1.311-.546-2.673-2.149-3.902-2.927C17.811 4.565 5.257-2.16 1.633 6.682c-2.289 5.581 3.421 11.025 5.462 13.854 1.434 1.982 3.269 4.207 4.293 6.438.674 1.467.79 2.938 1.367 4.489 1.417 3.822 2.652 7.98 4.487 11.511.927 1.788 1.949 3.67 3.122 5.268.718.981 1.951 1.413 2.145 2.927-1.204 1.686-1.273 4.304-1.95 6.44-3.05 9.615-1.899 21.567 2.537 28.683 1.36 2.186 4.567 6.871 8.975 5.073 3.856-1.57 2.995-6.438 4.098-10.732.249-.973.096-1.689.585-2.341v.195l3.513 7.024c2.6 4.187 7.212 8.562 11.122 11.514 2.027 1.531 3.623 4.177 6.244 5.073v-.196h-.195c-.508-.791-1.303-1.119-1.951-1.755-1.527-1.497-3.225-3.358-4.487-5.073-3.556-4.827-6.698-10.11-9.561-15.609-1.368-2.627-2.557-5.523-3.709-8.196-.444-1.03-.438-2.589-1.364-3.122-1.263 1.958-3.122 3.542-4.098 5.854-1.561 3.696-1.762 8.204-2.341 12.878-.342.122-.19.038-.391.194-2.718-.655-3.672-3.452-4.683-5.853-2.554-6.07-3.029-15.842-.781-22.829.582-1.809 3.21-7.501 2.146-9.172-.508-1.666-2.184-2.63-3.121-3.903-1.161-1.574-2.319-3.646-3.124-5.464-2.09-4.731-3.066-10.044-5.267-14.828-1.053-2.287-2.832-4.602-4.293-6.634-1.617-2.253-3.429-3.912-4.683-6.635-.446-.968-1.051-2.518-.391-3.513.21-.671.508-.951 1.171-1.17 1.132-.873 4.284.29 5.462.779 3.129 1.3 5.741 2.538 8.392 4.294 1.271.844 2.559 2.475 4.097 2.927h1.756c2.747.631 5.824.195 8.391.975 4.536 1.378 8.601 3.523 12.292 5.854 11.246 7.102 20.442 17.21 26.732 29.269 1.012 1.942 1.45 3.794 2.341 5.854 1.798 4.153 4.063 8.426 5.852 12.488 1.786 4.052 3.526 8.141 6.05 11.513 1.327 1.772 6.451 2.723 8.781 3.708 1.632.689 4.307 1.409 5.854 2.34 2.953 1.782 5.815 3.903 8.586 5.855 1.383.975 5.64 3.116 5.852 4.879zM29.729 23.466c-1.431-.027-2.443.156-3.513.389v.195h.195c.683 1.402 1.888 2.306 2.731 3.513.65 1.367 1.301 2.732 1.952 4.097l.194-.193c1.209-.853 1.762-2.214 1.755-4.294-.484-.509-.555-1.147-.975-1.755-.556-.811-1.635-1.272-2.339-1.952z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128"><path fill="#83CD29" d="M106.142 69.501L69.55 111.41c-2.483 2.762-6.848 2.762-9.327-.002L23.625 69.501c-2.364-2.635-1.812-6.742 1.221-8.463L35.52 54.987v29.486c0 1.595.863 3.152 2.244 3.937l23.658 13.455c1.381.784 3.107.784 4.488 0l23.657-13.455c1.382-.785 2.245-2.342 2.245-3.937V55.373l11.084 6.052c2.945 1.606 3.566 5.707 1.246 8.076zM64 13.73l46.427 25.458L64 64.646 17.573 39.188z"/></svg>
           </template>
-          <template #description>An open-source relational database management system (RDBMS) that uses Structured Query Language (SQL) to manage and organize data in tables with predefined relationships.</template>
+          <template #description>A cross-platform, open-source JavaScript runtime environment that executes JavaScript code outside a web browser, enabling server-side scripting.</template>
+        </SkillCard>
+        <SkillCard skillName="Next.js">
+          <template #icon>
+            <!-- Next.js logo: black square with white "N" lettermark -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <rect width="128" height="128" rx="6" fill="#000"/>
+              <text x="64" y="96" text-anchor="middle" font-size="80" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">N</text>
+            </svg>
+          </template>
+          <template #description>A React framework for building server-side rendered and statically generated web applications with file-based routing and API routes.</template>
+        </SkillCard>
+        <SkillCard skillName="Express">
+          <template #icon>
+            <!-- Express: dark background with white "Ex" text -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <rect width="128" height="128" rx="6" fill="#333"/>
+              <text x="64" y="82" text-anchor="middle" font-size="50" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">Ex</text>
+            </svg>
+          </template>
+          <template #description>A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.</template>
+        </SkillCard>
+        <SkillCard skillName="Flask">
+          <template #icon>
+            <!-- Flask: simple laboratory flask shape -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <path fill="#333" d="M48 8h32v40l28 56a8 8 0 01-7.2 11.5H27.2A8 8 0 0120 104l28-56V8z"/>
+              <path fill="#555" d="M48 64l-22 44h72L76 64H48z"/>
+              <rect x="44" y="8" width="40" height="6" rx="3" fill="#888"/>
+            </svg>
+          </template>
+          <template #description>A lightweight WSGI web application framework for Python, designed for quick and easy development of web applications and APIs.</template>
+        </SkillCard>
+        <SkillCard skillName="FastAPI">
+          <template #icon>
+            <!-- FastAPI: teal square with lightning bolt -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <rect width="128" height="128" rx="6" fill="#009688"/>
+              <polygon points="72,12 36,72 60,72 56,116 92,56 68,56" fill="#fff"/>
+            </svg>
+          </template>
+          <template #description>A modern, fast web framework for building APIs with Python 3.7+ based on standard Python type hints and automatic documentation.</template>
+        </SkillCard>
+        <SkillCard skillName="Django">
+          <template #icon>
+            <!-- Django: dark green square with "Dj" text -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <rect width="128" height="128" rx="6" fill="#092E20"/>
+              <text x="64" y="90" text-anchor="middle" font-size="62" font-family="Georgia, serif" fill="#fff" font-weight="bold">Dj</text>
+            </svg>
+          </template>
+          <template #description>A high-level Python web framework that encourages rapid development and clean, pragmatic design with built-in admin, ORM, and authentication.</template>
         </SkillCard>
       </div>
     </div>
-
     <div class="skills-section">
       <h2>Frontend</h2>
       <div class="grid">
@@ -42,82 +162,112 @@
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128"><path d="M0 8.934l49.854.158 14.167 24.47 14.432-24.47L128 8.935l-63.834 110.14zm126.98.637l-24.36.02-38.476 66.053L25.691 9.592.942 9.572l63.211 107.89zm-25.149-.008l-22.745.168-15.053 24.647L49.216 9.73l-22.794-.168 37.731 64.476zm-75.834-.17l23.002.009m-23.002-.01l23.002.01" fill="none"/><path d="M25.997 9.393l23.002.009L64.035 34.36 79.018 9.404 102 9.398 64.15 75.053z" fill="#35495e"/><path d="M.91 9.569l25.067-.172 38.15 65.659L101.98 9.401l25.11.026-62.966 108.06z" fill="#41b883"/></svg>
           </template>
           <template #description>A progressive JavaScript framework for building user interfaces and single-page applications, known for its approachability, performance, and versatility.</template>
-        </SkillCard>  
-
+        </SkillCard>
         <SkillCard skillName="JavaScript">
           <template #icon>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="w-6 h-6">
-              <text x="12" y="16" text-anchor="middle" font-size="14" font-family="Arial, Helvetica, sans-serif" fill="#e50914" font-weight="bold">JS</text>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <rect width="128" height="128" fill="#f7df1e"/>
+              <text x="64" y="96" text-anchor="middle" font-size="72" font-family="Arial, Helvetica, sans-serif" fill="#323330" font-weight="bold">JS</text>
             </svg>
           </template>
           <template #description>A high-level, interpreted programming language primarily used for making web pages interactive and dynamic, enabling client-side scripting and increasingly server-side development.</template>
         </SkillCard>
-
-        <SkillCard skillName="Tailwind CSS" >
+        <SkillCard skillName="Tailwind CSS">
           <template #icon>
-           <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128"><path d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0" fill="#38bdf8"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128"><path d="M64.004 25.602c-17.067 0-27.73 8.53-32 25.597 6.398-8.531 13.867-11.73 22.398-9.597 4.871 1.214 8.352 4.746 12.207 8.66C72.883 56.629 80.145 64 96.004 64c17.066 0 27.73-8.531 32-25.602-6.399 8.536-13.867 11.735-22.399 9.602-4.87-1.215-8.347-4.746-12.207-8.66-6.27-6.367-13.53-13.738-29.394-13.738zM32.004 64c-17.066 0-27.73 8.531-32 25.602C6.402 81.066 13.87 77.867 22.402 80c4.871 1.215 8.352 4.746 12.207 8.66 6.274 6.367 13.536 13.738 29.395 13.738 17.066 0 27.73-8.53 32-25.597-6.399 8.531-13.867 11.73-22.399 9.597-4.87-1.214-8.347-4.746-12.207-8.66C55.128 71.371 47.868 64 32.004 64zm0 0" fill="#38bdf8"/></svg>
           </template>
           <template #description>A utility-first CSS framework that provides low-level utility classes to build custom designs without leaving your HTML, promoting rapid UI development.</template>
         </SkillCard>
-
         <SkillCard skillName="Bootstrap">
           <template #icon>
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128"><defs><linearGradient id="a" x1="76.079" x2="523.48" y1="10.798" y2="365.95" gradientTransform="translate(1.11 14.613) scale(.24566)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#9013fe"/><stop offset="1" stop-color="#6610f2"/></linearGradient><linearGradient id="b" x1="193.51" x2="293.51" y1="109.74" y2="278.87" gradientTransform="translate(0 52)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f1e5fc"/></linearGradient><filter id="c" width="197" height="249" x="161.9" y="135.46" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dy="4"/><feGaussianBlur stdDeviation="8"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/><feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/></filter></defs><path fill="url(#a)" d="M14.985 27.712c-.237-6.815 5.072-13.099 12.249-13.099h73.54c7.177 0 12.486 6.284 12.249 13.099-.228 6.546.068 15.026 2.202 21.94 2.141 6.936 5.751 11.319 11.664 11.883v6.387c-5.913.564-9.523 4.947-11.664 11.883-2.134 6.914-2.43 15.394-2.202 21.94.237 6.815-5.072 13.098-12.249 13.098h-73.54c-7.177 0-12.486-6.284-12.249-13.098.228-6.546-.068-15.026-2.203-21.94-2.14-6.935-5.76-11.319-11.673-11.883v-6.387c5.913-.563 9.533-4.947 11.673-11.883 2.135-6.914 2.43-15.394 2.203-21.94z"/><path fill="url(#b)" d="M267.1 364.46c47.297 0 75.798-23.158 75.798-61.355 0-28.873-20.336-49.776-50.532-53.085v-1.203c22.185-3.609 39.594-24.211 39.594-47.219 0-32.783-25.882-54.138-65.322-54.138h-88.74v217zm-54.692-189.48h45.911c24.958 0 39.131 11.128 39.131 31.279 0 21.505-16.484 33.535-46.372 33.535h-38.67zm0 161.96v-71.431h45.602c32.661 0 49.608 12.03 49.608 35.49 0 23.459-16.484 35.941-47.605 35.941z" filter="url(#c)" transform="translate(1.494 2.203) scale(.24566)"/></svg>
-
           </template>
           <template #description>A popular front-end framework for developing responsive and mobile-first websites, featuring a collection of CSS and JavaScript components.</template>
         </SkillCard>
       </div>
     </div>
-
     <div class="skills-section">
-      <h2>Database  </h2>
+      <h2>Database</h2>
       <div class="grid">
         <SkillCard skillName="MySQL">
+          <template #icon>
+            <!-- MySQL: orange/blue dolphin-style logo simplified -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <rect width="128" height="128" rx="6" fill="#00758F"/>
+              <text x="64" y="78" text-anchor="middle" font-size="28" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">MySQL</text>
+            </svg>
+          </template>
           <template #description>An open-source relational database management system (RDBMS) that uses Structured Query Language (SQL) to manage and organize data in tables with predefined relationships.</template>
         </SkillCard>
-
         <SkillCard skillName="PostgreSQL">
+          <template #icon>
+            <!-- PostgreSQL: blue square with elephant/PG text -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <rect width="128" height="128" rx="6" fill="#336791"/>
+              <text x="64" y="78" text-anchor="middle" font-size="28" font-family="Arial, Helvetica, sans-serif" fill="#fff" font-weight="bold">PgSQL</text>
+            </svg>
+          </template>
           <template #description>An advanced, open-source relational database management system known for its robustness, extensibility, and support for complex queries and large datasets.</template>
         </SkillCard>
       </div>
     </div>
-
     <div class="skills-section">
       <h2>Other</h2>
       <div class="grid">
         <SkillCard skillName="Git">
+          <template #icon>
+            <!-- Git: official orange with branching icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <rect width="128" height="128" rx="16" fill="#F05032"/>
+              <circle cx="40" cy="88" r="12" fill="#fff"/>
+              <circle cx="88" cy="40" r="12" fill="#fff"/>
+              <circle cx="88" cy="88" r="12" fill="#fff"/>
+              <line x1="40" y1="88" x2="88" y2="40" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+              <line x1="88" y1="40" x2="88" y2="88" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+            </svg>
+          </template>
           <template #description>A distributed version control system for tracking changes in source code during software development.</template>
         </SkillCard>
-
         <SkillCard skillName="Docker">
+          <template #icon>
+            <!-- Docker: blue whale logo simplified -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" width="24px" viewBox="0 0 128 128">
+              <rect width="128" height="128" rx="6" fill="#2496ED"/>
+              <!-- Container stack blocks -->
+              <rect x="20" y="56" width="18" height="14" rx="2" fill="#fff"/>
+              <rect x="42" y="56" width="18" height="14" rx="2" fill="#fff"/>
+              <rect x="64" y="56" width="18" height="14" rx="2" fill="#fff"/>
+              <rect x="42" y="38" width="18" height="14" rx="2" fill="#fff"/>
+              <rect x="64" y="38" width="18" height="14" rx="2" fill="#fff"/>
+              <rect x="64" y="20" width="18" height="14" rx="2" fill="#fff"/>
+              <!-- Whale body -->
+              <path d="M18 76 Q20 96 64 96 Q100 96 108 80 Q116 76 112 70 Q108 70 106 74 Q100 86 64 86 Q28 86 22 74 Z" fill="#fff"/>
+              <!-- Whale tail -->
+              <path d="M108 70 Q118 60 114 50 Q110 55 108 62 Z" fill="#fff"/>
+            </svg>
+          </template>
           <template #description>A platform for developing, shipping, and running applications in containers, enabling consistent environments across various stages of development.</template>
         </SkillCard>
       </div>
     </div>
   </div>
 </template>
-
 <script setup>
 import Header from '@/Components/Header.vue';
 import SkillCard from '@/Components/SkillCard.vue';
 </script>
-
 <style scoped>
 @font-face {
   font-family: 'BebasNeue';
   src: url('/fonts/BebasNeue.otf') format('opentype');
 }
-
 .skills-container {
   text-align: center;
   padding-top: 100px;
 }
-
 .skills-section {
   margin-top: 40px;
 }
-
 h2 {
   margin-bottom: 20px;
   font-size: 32px;
@@ -128,7 +278,6 @@ h2 {
   text-underline-offset: 7px;
   text-decoration-thickness: 2px;
 }
-
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -136,5 +285,3 @@ h2 {
   gap: 32px;
 }
 </style>
-
-
