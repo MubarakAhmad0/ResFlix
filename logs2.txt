@@ -1,0 +1,29 @@
+2026-05-01T09:00:10.416Z	Initializing build environment...
+2026-05-01T09:00:11.681Z	Success: Finished initializing build environment
+2026-05-01T09:00:12.138Z	Cloning repository...
+2026-05-01T09:00:13.738Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-05-01T09:00:13.740Z	Restoring from dependencies cache
+2026-05-01T09:00:13.742Z	Restoring from build output cache
+2026-05-01T09:00:13.877Z	Installing project dependencies: npm clean-install --progress=false
+2026-05-01T09:00:20.904Z	
+2026-05-01T09:00:20.904Z	added 224 packages, and audited 225 packages in 6s
+2026-05-01T09:00:20.904Z	
+2026-05-01T09:00:20.904Z	59 packages are looking for funding
+2026-05-01T09:00:20.904Z	  run `npm fund` for details
+2026-05-01T09:00:20.926Z	
+2026-05-01T09:00:20.926Z	15 vulnerabilities (5 moderate, 8 high, 2 critical)
+2026-05-01T09:00:20.926Z	
+2026-05-01T09:00:20.926Z	To address issues that do not require attention, run:
+2026-05-01T09:00:20.926Z	  npm audit fix
+2026-05-01T09:00:20.927Z	
+2026-05-01T09:00:20.927Z	To address all issues (including breaking changes), run:
+2026-05-01T09:00:20.927Z	  npm audit fix --force
+2026-05-01T09:00:20.927Z	
+2026-05-01T09:00:20.927Z	Run `npm audit` for details.
+2026-05-01T09:00:21.114Z	Executing user build command: npm run build
+2026-05-01T09:00:21.399Z	
+2026-05-01T09:00:21.400Z	> build
+2026-05-01T09:00:21.400Z	> php artisan ziggy:generate && vite build
+2026-05-01T09:00:21.400Z	
+2026-05-01T09:00:21.404Z	sh: 1: php: not found
+2026-05-01T09:00:21.421Z	Failed: error occurred while running build command
