@@ -18,9 +18,4 @@ export default defineConfig({
             },
         }),
     ],
-    resolve: {
-        alias: {
-            'ziggy-vue': path.resolve('vendor/tightenco/ziggy/dist/index.esm.js'),
-        },
-    },
 });
