@@ -1,0 +1,21 @@
+C:\Users\ASUS\TungTung>npm run build
+
+> build
+> php artisan ziggy:generate && vite build
+
+Files generated!
+vite v6.3.5 building for production...
+transforming (16) resources\js\Pages\Home.vueBrowserslist: browsers data (caniuse-lite) is 12 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+/images/profilepic.jpeg referenced in /images/profilepic.jpeg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+transforming (37) node_modules\axios\index.js
+/fonts/BebasNeue.otf referenced in /fonts/BebasNeue.otf didn't resolve at build time, it will remain unchanged to be resolved at runtime
+✓ 48 modules transformed.
+✗ Build failed in 1.05s
+error during build:
+[vite:load-fallback] Could not load C:\Users\ASUS\TungTung\vendor\tightenco\ziggy\dist\vue.es.js (imported by resources/js/app.js): ENOENT: no such file or directory, open 'C:\Users\ASUS\TungTung\vendor\tightenco\ziggy\dist\vue.es.js'
+Error: Could not load C:\Users\ASUS\TungTung\vendor\tightenco\ziggy\dist\vue.es.js (imported by resources/js/app.js): ENOENT: no such file or directory, open 'C:\Users\ASUS\TungTung\vendor\tightenco\ziggy\dist\vue.es.js'
+
+C:\Users\ASUS\TungTung>
