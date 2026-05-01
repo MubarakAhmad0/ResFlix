@@ -24,3 +24,9 @@ Homestead.yaml
 npm-debug.log
 Thumbs.db
 yarn-error.log
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example
