@@ -1,0 +1,1 @@
+import{c as t,o as a,a as r,t as o}from"./index-B2Pfg0rb.js";const u={__name:"About",props:{user:String},setup(e){return(s,n)=>(a(),t("div",null,[r("h1",null,"About "+o(e.user),1)]))}};export{u as default};

@@ -1,0 +1,169 @@
+
+Mubarakelmughrabi@gmail.com's Account
+
+    Account home
+        TransfersDomains
+        RegistrationsDomains
+        OverviewDomains
+        res-flixWorkers
+        Workers & PagesCompute
+        Overview
+        Registrations
+        Transfers
+    Observe
+            Log search
+        TraceBeta
+        Logpush
+        Account analytics
+        Web analytics
+    Build
+        Workers & Pages
+        Observability
+        Workers for Platforms
+        Containers
+        Durable Objects
+        Queues
+        Workflows
+        Browser Run
+        VPCBeta
+            Email SendingBeta
+            Email Routing
+        Workers plans
+        Models
+        Workers AI
+        AI Gateway
+        Vectorize
+        AI SearchBeta
+            Overview
+            Data migration
+        Hyperdrive
+        Workers KV
+        D1 SQL database
+        Analytics Engine
+            Pipelines
+        Secrets StoreNew
+            Plans
+            Transformations
+            Hosted images
+            Plans
+            RealtimeKitBeta
+            TURN Server
+            Serverless SFU
+            MoQ RelayAlpha
+            MoQ Bench
+    Protect & Connect
+        Security insights
+        WAF
+        Investigate
+        Infrastructure
+        Turnstile
+    Zero Trust
+        OverviewNew
+            Network flow
+        TunnelsNew
+        MeshBeta
+            Address space
+            Address maps
+        Bulk redirects
+        Load Balancing
+            Tag setup
+            Consent
+            History
+            Monitoring
+            Settings
+            Zaraz plans
+            Google Tag Gateway
+        Members
+        Billing
+        Account API tokens
+        Audit logs
+        Notifications
+        Shared configAlpha
+        Blocked content
+        Abuse reportsBeta
+        Carbon Impact Report
+        Configurations
+        Tagged ResourcesBeta
+
+    Workers & Pages
+    resflix
+
+Deployments
+Metrics
+Custom domains
+Settings
+
+    Build
+    Variables and Secrets
+    Bindings
+    Runtime
+    General
+
+Pages configuration
+Give feedback
+Choose Environment:
+Build
+Git repository
+MubarakAhmad0/ResFlix
+Build configuration
+Build command:npm run build
+Build output:public/build
+Root directory:
+Build comments:Enabled
+Build cache
+Disabled
+Branch control
+Production branch:main
+Automatic deployments:Enabled
+Build watch paths
+Include paths:
+*
+Build system version
+Version 3
+Deploy Hooks
+No deploy hooks defined
+Variables and Secrets
+
+Define the text, secret or build variables for your project
+Configure API tokens and other runtime variables
+Bindings
+
+Define the set of resources available to your Pages Functions
+Configure ways to interact with storage, databases, AI and more from your Worker
+Runtime
+
+Define the runtime configuration for your Pages Functions
+
+    Placement
+    Default
+    Compatibility date
+    May 1, 2026
+    Compatibility flags
+    No flags defined
+    Fail open/closed
+    Fail open
+
+General
+Name
+resflix
+Notifications
+Subscribe to specific events by adding a notification to your project
+Access policy
+Control access to preview deployments with Cloudflare Access.
+Permanently delete this Pages project including all deployments, assets, functions and configurations associated with it.
+
+    Support
+    System status
+    Careers
+    Terms of Use
+    Report Security Issues
+    Privacy Policy
+    © 2026 Cloudflare, Inc.
+
+Need more help?
+Good evening.
+
+What are we doing today?
+
+Chats are recorded to improve the service and are processed in accordance with our Privacy Policy.
+.090
