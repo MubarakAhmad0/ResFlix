@@ -72,7 +72,7 @@ const handleClick = (event) => {
 /* The article ONLY handles positioning and the marquee animation now */
 article {
   position: absolute;
-  top: 0;
+  top: 24px;
   left: calc(100% + var(--carousel-item-gap));
   width: 340px;
   height: 500px;
