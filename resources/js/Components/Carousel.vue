@@ -212,9 +212,8 @@ p {
   line-height: 1.4rem;
   font-size: 0.85rem;
   color: #ccc;
-  flex-grow: 1; 
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -234,7 +233,7 @@ a {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   transition: background 0.2s ease;
   border: none;
-  margin-top: 4px;
+  margin-top: auto;
 }
 
 a:hover,
