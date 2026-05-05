@@ -48,7 +48,7 @@
           </div>
 
           <template v-for="(ep, index) in bloomThisEpisodes" :key="ep.id">
-            <Transition name="fade-slide">
+            <Transition name="fade-slide" appear>
               <div v-if="showEpisodes" class="card-cell" :style="{ '--delay': `${index * 0.08}s` }">
                 <a href="#" class="project-card" @click.prevent>
                   <div class="card-bg episode-bg">
@@ -147,7 +147,7 @@ import Banner from '@/Components/Banner.vue'
 import ProjectSection from '@/Components/ProjectSection.vue'
 import Footer from '@/Components/Footer.vue'
 
-const showEpisodes = ref(false)
+const showEpisodes = ref(true)
 const toggleEpisodes = () => { showEpisodes.value = !showEpisodes.value }
 
 // ── SVG components defined inline ──────────────────────────────
