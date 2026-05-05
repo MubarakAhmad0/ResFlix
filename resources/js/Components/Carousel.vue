@@ -2,6 +2,8 @@
   <article>
     <div class="card-content">
       
+      <div v-if="isLive" class="live-badge">LIVE</div>
+      
       <div class="media">
         <img v-if="image" :src="image" :alt="alt" />
         <div v-else-if="svgComponent" class="svg-fallback">
@@ -58,6 +60,10 @@ defineProps({
   tags: {
     type: Array,
     default: () => []
+  },
+  isLive: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -97,9 +103,11 @@ article:nth-child(5) { --i: 4; }
 article:nth-child(6) { --i: 5; }
 article:nth-child(7) { --i: 6; }
 article:nth-child(8) { --i: 7; }
+article:nth-child(9) { --i: 8; }
 
 /* The new wrapper handles styling, colors, layout, and the hover scale */
 .card-content {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
@@ -117,6 +125,23 @@ article:hover .card-content,
 article:focus-visible .card-content {
   transform: scale(1.04) translateY(-8px); 
   box-shadow: 0 12px 32px rgba(229, 9, 20, 0.7);
+}
+
+/* ── Live Badge ── */
+.live-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #22c55e;
+  color: white;
+  font-size: 0.6rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.08em;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.4);
 }
 
 /* ── Media Styles (Image & SVG) ── */

@@ -27,6 +27,7 @@
           :link="item.link"
           :link-text="item.linkText"
           :tags="item.tags"
+          :is-live="item.isLive"
         />
       </div>
     </div>
@@ -41,6 +42,17 @@ import Header from '@/Components/Header.vue'
 import CarouselCard from '@/Components/Carousel.vue'
 
 // ── Custom SVGs ─────────────────────────────────────────────
+
+const SvgUniHub = {
+  render: () => h('svg', { viewBox: '0 0 64 64', fill: 'none', xmlns: 'http://www.w3.org/2000/svg' }, [
+    h('rect', { x: '12', y: '10', width: '40', height: '44', rx: '4', stroke: '#fff', 'stroke-width': '2' }),
+    h('path', { d: 'M12 22 L32 10 L52 22', stroke: '#fff', 'stroke-width': '2', fill: 'none' }),
+    h('path', { d: 'M20 30 L24 30 M28 30 L32 30 M36 30 L40 30', stroke: '#e50914', 'stroke-width': '2', 'stroke-linecap': 'round' }),
+    h('path', { d: 'M20 38 L44 38 M20 46 L44 46', stroke: '#fff', 'stroke-width': '2', 'stroke-linecap': 'round', opacity: '0.5' }),
+    h('circle', { cx: '50', cy: '14', r: '4', fill: '#e50914' }),
+    h('rect', { x: '20', y: '52', width: '24', height: '2', fill: '#e50914', rx: '1' }),
+  ])
+}
 
 const SvgEHealth = {
   render: () => h('svg', { viewBox: '0 0 64 64', fill: 'none', xmlns: 'http://www.w3.org/2000/svg' }, [
@@ -134,13 +146,25 @@ const SvgAutomata = {
 const carouselItems = [
   {
     image: null,
+    svgComponent: SvgUniHub,
+    alt: 'UniHub',
+    title: 'UniHub',
+    description: 'A comprehensive university student portal built with Next.js 15 — features four main sections: Academic, Campus, Community, and Services. Includes role-based authentication with better-auth, PostgreSQL database with Drizzle ORM, and a full admin module for managing users, roles, and permissions.',
+    link: 'https://uni-hub-seven.vercel.app/',
+    linkText: 'View Project',
+    tags: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Drizzle ORM', 'better-auth', 'shadcn/ui'],
+    isLive: true
+  },
+  {
+    image: null,
     svgComponent: SvgEHealth,
     alt: 'eHealth System',
     title: 'eHealth System',
     description: 'A comprehensive digital platform to streamline healthcare services — tracks student health, manages hostel assignments for sick and healthy students, and facilitates appointment booking to contain virus outbreaks.',
     link: '#',
     linkText: 'View Project',
-    tags: ['PHP', 'MySQL', 'XAMPP']
+    tags: ['PHP', 'MySQL', 'XAMPP'],
+    isLive: false
   },
   {
     image: null,
@@ -150,7 +174,8 @@ const carouselItems = [
     description: 'A portfolio-sharing platform where students and professionals showcase their work. Features authentication, role-based admin controls, and a clean browsable directory of talent profiles.',
     link: '#',
     linkText: 'View Project',
-    tags: ['PHP', 'MySQL', 'HTML']
+    tags: ['PHP', 'MySQL', 'HTML'],
+    isLive: false
   },
   {
     image: null,
@@ -160,7 +185,8 @@ const carouselItems = [
     description: 'A full-featured food delivery app inspired by Grab — with ordering, cart management, live order tracking, and Firebase-backed authentication. Built with a modern Laravel + Vue.js + Inertia stack.',
     link: '#',
     linkText: 'View Project',
-    tags: ['Laravel', 'Vue.js', 'Firebase', 'Inertia']
+    tags: ['Laravel', 'Vue.js', 'Firebase', 'Inertia'],
+    isLive: false
   },
   {
     image: null,
@@ -170,7 +196,8 @@ const carouselItems = [
     description: 'End-to-end hostel administration system handling room allocation, resident tracking, and payments — all with role-based access control to separate student, staff, and admin views.',
     link: '#',
     linkText: 'View Project',
-    tags: ['Python', 'Django', 'MySQL']
+    tags: ['Python', 'Django', 'MySQL'],
+    isLive: false
   },
   {
     image: null,
@@ -180,7 +207,8 @@ const carouselItems = [
     description: 'A native Android app built with Jetpack Compose that gives students AI-powered financial insights, real-time transaction tracking, and budget visualisation — all stored locally with Room DB.',
     link: '#',
     linkText: 'View Project',
-    tags: ['Kotlin', 'Jetpack Compose', 'Room DB', 'AI/ML']
+    tags: ['Kotlin', 'Jetpack Compose', 'Room DB', 'AI/ML'],
+    isLive: false
   },
   {
     image: null,
@@ -190,7 +218,8 @@ const carouselItems = [
     description: 'An interactive graph algorithm visualiser that renders Dijkstra, BFS, and DFS step-by-step in real time using SFML. Demonstrates pathfinding visually on custom graph inputs.',
     link: '#',
     linkText: 'View Project',
-    tags: ['C++', 'SFML', 'Graph Theory']
+    tags: ['C++', 'SFML', 'Graph Theory'],
+    isLive: false
   },
   {
     image: null,
@@ -200,7 +229,8 @@ const carouselItems = [
     description: 'A Java Swing desktop app with full image editing capabilities — filters, layers, drawing tools, and an undo/redo stack. A hand-built Photoshop-lite in pure Java.',
     link: '#',
     linkText: 'View Project',
-    tags: ['Java', 'Swing']
+    tags: ['Java', 'Swing'],
+    isLive: false
   },
   {
     image: null,
@@ -210,7 +240,8 @@ const carouselItems = [
     description: 'A vending machine simulator that demonstrates the difference between Nondeterministic and Deterministic Finite Automata through an interactive UI — bringing Theory of Computation to life.',
     link: '#',
     linkText: 'View Project',
-    tags: ['JavaScript', 'Python', 'NiceGUI']
+    tags: ['JavaScript', 'Python', 'NiceGUI'],
+    isLive: false
   },
 ]
 </script>
@@ -307,7 +338,7 @@ const carouselItems = [
 
 /* ── Carousel ────────────────────────────────────────── */
 .carousel {
-  --items: 8;
+  --items: 9;
   --carousel-duration: 55s;
   --carousel-width: min(90vw, 1300px);
   --carousel-item-width: 300px;

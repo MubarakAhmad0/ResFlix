@@ -1,0 +1,9 @@
+Dockerfile:22
+--------------------
+  20 |     
+  21 |     # Install PHP dependencies
+  22 | >>> RUN composer install --no-dev --optimize-autoloader
+  23 |     
+  24 |     # Create .env file
+--------------------
+error: failed to solve: process "/bin/sh -c composer install --no-dev --optimize-autoloader" did not complete successfully: exit code: 2

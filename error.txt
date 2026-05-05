@@ -1,21 +1,8 @@
-C:\Users\ASUS\TungTung>npm run build
-
-> build
-> php artisan ziggy:generate && vite build
-
-Files generated!
-vite v6.3.5 building for production...
-transforming (16) resources\js\Pages\Home.vueBrowserslist: browsers data (caniuse-lite) is 12 months old. Please run:
-  npx update-browserslist-db@latest
-  Why you should do it regularly: https://github.com/browserslist/update-db#readme
-
-/images/profilepic.jpeg referenced in /images/profilepic.jpeg didn't resolve at build time, it will remain unchanged to be resolved at runtime
-transforming (37) node_modules\axios\index.js
-/fonts/BebasNeue.otf referenced in /fonts/BebasNeue.otf didn't resolve at build time, it will remain unchanged to be resolved at runtime
-✓ 48 modules transformed.
-✗ Build failed in 1.05s
-error during build:
-[vite:load-fallback] Could not load C:\Users\ASUS\TungTung\vendor\tightenco\ziggy\dist\vue.es.js (imported by resources/js/app.js): ENOENT: no such file or directory, open 'C:\Users\ASUS\TungTung\vendor\tightenco\ziggy\dist\vue.es.js'
-Error: Could not load C:\Users\ASUS\TungTung\vendor\tightenco\ziggy\dist\vue.es.js (imported by resources/js/app.js): ENOENT: no such file or directory, open 'C:\Users\ASUS\TungTung\vendor\tightenco\ziggy\dist\vue.es.js'
-
-C:\Users\ASUS\TungTung>
+2026-05-01T17:21:21.795270826Z ==> Cloning from https://github.com/MubarakAhmad0/ResFlix
+2026-05-01T17:21:22.88415758Z ==> Checking out commit b7c960364f452a65a91c704d268226e30315bc65 in branch main
+2026-05-01T17:21:27.788052152Z ==> Using Node.js version 22.16.0 (default)
+2026-05-01T17:21:27.827703515Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2026-05-01T17:21:30.097641678Z ==> Running build command 'composer install --no-dev --optimize-autoloader && php artisan ziggy:generate && npm install && npm run build'...
+2026-05-01T17:21:30.101685127Z bash: line 1: composer: command not found
+2026-05-01T17:21:30.143557358Z ==> Build failed 😞
+2026-05-01T17:21:30.143573999Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys
