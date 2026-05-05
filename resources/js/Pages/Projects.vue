@@ -146,17 +146,6 @@ const SvgAutomata = {
 const carouselItems = [
   {
     image: null,
-    svgComponent: SvgUniHub,
-    alt: 'UniHub',
-    title: 'UniHub',
-    description: 'A comprehensive university student portal built with Next.js 15 — features four main sections: Academic, Campus, Community, and Services. Includes role-based authentication with better-auth, PostgreSQL database with Drizzle ORM, and a full admin module for managing users, roles, and permissions.',
-    link: 'https://uni-hub-seven.vercel.app/',
-    linkText: 'View Project',
-    tags: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Drizzle ORM', 'better-auth', 'shadcn/ui'],
-    isLive: true
-  },
-  {
-    image: null,
     svgComponent: SvgEHealth,
     alt: 'eHealth System',
     title: 'eHealth System',
@@ -165,6 +154,17 @@ const carouselItems = [
     linkText: 'View Project',
     tags: ['PHP', 'MySQL', 'XAMPP'],
     isLive: false
+  },
+  {
+    image: null,
+    svgComponent: SvgUniHub,
+    alt: 'UniHub',
+    title: 'UniHub',
+    description: 'A comprehensive university student portal built with Next.js 15 — features four main sections: Academic, Campus, Community, and Services. Includes role-based authentication with better-auth, PostgreSQL database with Drizzle ORM, and a full admin module for managing users, roles, and permissions.',
+    link: 'https://uni-hub-seven.vercel.app/',
+    linkText: 'View Project',
+    tags: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Drizzle ORM', 'better-auth', 'shadcn/ui'],
+    isLive: true
   },
   {
     image: null,
